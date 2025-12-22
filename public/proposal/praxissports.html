@@ -1,367 +1,571 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Praxis Sports - Full-Funnel Growth & Community Proposal (SEO + Paid + Outbound + GEO)</title>
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap');
-    
-    body {
-      font-family: 'Roboto', sans-serif;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Google Sans', sans-serif;
-    }
-    
-    /* Custom bullet styles */
-    .custom-bullet {
-      display: flex;
-      align-items: start;
-      gap: 0.75rem;
-      margin-bottom: 0.5rem;
-    }
-    
-    .custom-bullet::before {
-      content: "✓";
-      color: #137333;
-      font-weight: bold;
-      flex-shrink: 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praxis Sports SEO Strategy & Implementation Proposal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #f8f9fa; color: #202124; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Google Sans', sans-serif; }
+        .google-blue { color: #1a73e8; }
+        .bg-google-blue { background-color: #1a73e8; }
+        .bg-google-blue-light { background-color: #e8f0fe; }
+        .google-green { color: #137333; }
+        .bg-google-green { background-color: #e6f4ea; }
+        .text-dark-grey { color: #202124; }
+        .text-light-grey { color: #5f6368; }
+        
+        /* Custom Bullet Points */
+        ul.custom-bullets li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        ul.custom-bullets li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6rem;
+            width: 6px;
+            height: 6px;
+            background-color: #1a73e8;
+            border-radius: 50%;
+        }
+    </style>
 </head>
+<body class="min-h-screen flex flex-col">
 
-<body class="bg-white text-[#202124]">
-  <div class="max-w-6xl mx-auto px-6 py-12">
-    
-    <!-- HEADER: Logo + Tagline -->
-    <header class="flex items-center gap-6 mb-12 pb-6 border-b border-gray-200">
-      <img src="https://iexcel.co/wp-content/uploads/2023/01/iexcel_logo.png" 
-           alt="iExcel" 
-           class="h-12 object-contain">
-      <div class="h-10 w-px bg-gray-300"></div>
-      <span class="text-sm text-[#5f6368] font-medium tracking-wide">
-        Digital Marketing, Focused On Growth
-      </span>
+    <!-- Header / Brand Bar (STICKY) -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center">
+                <img src="https://iexcel.co/wp-content/uploads/2023/01/iexcel_logo.png" alt="iExcel Logo" class="h-10 w-auto">
+            </div>
+            <div class="text-sm font-medium text-[#5f6368] tracking-wide uppercase border-l-2 border-gray-200 pl-4">
+                Digital Marketing, Focused On Growth
+            </div>
+        </div>
     </header>
 
-    <!-- DOCUMENT CONTENT STARTS HERE -->
-    <!-- Use the component library above to format the markdown content -->
-    
-    <section class="mb-16">
-  <h1 class="text-4xl font-bold text-[#202124] mb-4">**Praxis Sports <> iExcel**</h1>
-  <h2 class="text-3xl font-bold text-[#202124] mb-6">*Full-Funnel Growth & Community Proposal (SEO + Paid + Outbound + GEO)*</h2>
-  <div class="prose max-w-none">
-    <p class="text-base text-[#5f6368] leading-relaxed mb-4">---</p>
-  </div>
-</section>
+    <main class="flex-grow max-w-5xl mx-auto px-6 py-10 space-y-10">
 
-<section class="mb-16">
-  <h2 class="text-3xl font-bold text-[#202124] mb-6">**Executive Summary**</h2>
-  <div class="prose max-w-none">
-    <p class="text-base text-[#5f6368] leading-relaxed mb-4">Praxis Sports is a sports tech platform that simplifies scheduling, communication, and operations for clubs, academies, and teams - from youth to pro. The product is strong and the team is uniquely credible (Olympians, MLS veterans), but the **digital footprint is early-stage and fragmented**:</p>
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Organic search is thin beyond branded terms; a handful of pages drive most traffic.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Social channels (especially Instagram/TikTok) show promise, but content is not yet tied to a clear funnel or narrative.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">There is **no paid acquisition** currently running.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Tracking, attribution, and GEO/SEO foundations can be strengthened to support scale.</li>
-    </ul>
-    <p class="text-base text-[#5f6368] leading-relaxed mb-4">At the same time, Praxis has clear strategic goals:</p>
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Tell **one coherent story** about who you are, who you serve, and why you're different.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Grow a **community of clubs and leaders** around that story.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Turn that community into a **predictable pipeline** of demos, trials, and accounts - while respecting startup budgets.</li>
-    </ul>
-    <p class="text-base text-[#5f6368] leading-relaxed mb-4">iExcel will act as a **performance-focused growth partner**:</p>
-    <ol class="list-decimal pl-6 mb-4">
-      <li><p class="text-base text-[#5f6368] leading-relaxed mb-2">**Unify the narrative** across website, SEO, and social so Praxis feels like one clear, compelling brand.</p></li>
-      <li><p class="text-base text-[#5f6368] leading-relaxed mb-2">**Build the digital foundation**: on-page SEO + GEO, conversion-focused web structure, and rock-solid tracking.</p></li>
-      <li><p class="text-base text-[#5f6368] leading-relaxed mb-2">**Stand up first scalable acquisition engines**: bottom-of-funnel paid search, lightweight paid social, and targeted outbound (cold email + LinkedIn).</p></li>
-      <li><p class="text-base text-[#5f6368] leading-relaxed mb-2">**Optimize for revenue and adoption**, not vanity metrics - weekly cycles of "what we did, what we learned, what we're doing next."</p></li>
-    </ol>
-  </div>
-</section>
+        <!-- Title Block (CENTERED) -->
+        <div class="text-center space-y-4">
+            <div class="inline-flex items-center justify-center px-3 py-1 bg-[#e8f0fe] text-[#1a73e8] rounded-full text-xs font-bold tracking-wider uppercase">
+                Company: Praxis Sports
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-[#202124]">Praxis Sports <> iExcel</h1>
+            <h2 class="text-2xl text-[#5f6368] font-normal">Full-Funnel Growth & Community Proposal (SEO + Paid + Outbound + GEO)</h2>
+            <div class="h-1 w-20 bg-[#1a73e8] mx-auto rounded-full mt-4"></div>
+        </div>
 
-<section class="mb-16">
-  <h2 class="text-3xl font-bold text-[#202124] mb-6">**What We Learned**</h2>
-  <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">**Business & product**</h3>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Praxis is a **sports management platform**: scheduling, communication, operations; aimed at simplifying the chaos of youth and team sports.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">You serve a **broad spectrum** (youth clubs, academies, schools, pro environments), but the messaging and web experience don't yet make that breadth feel coherent.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Praxis is **priced below many competitors**, but that advantage is not clearly or consistently communicated.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">The **team is a moat**: co-founders with MLS experience, CRO with Olympic gold medal credentials, deep relationships in the sports ecosystem - yet this story is underused in marketing.</li>
-    </ul>
-    <p class="text-base text-[#5f6368] leading-relaxed mb-4">*"We have a very unique team… that story is not being told right now." - Lindsay Tarpley*</p>
-  </div>
-  <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">**Current marketing reality**</h3>
-  <h4 class="text-xl font-semibold text-[#202124] mb-3">**Website & SEO**</h4>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Small index footprint; most organic traffic is branded or near-branded.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Rankings have been volatile in recent months; non-branded discovery is limited.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Site structure and content are not yet mapped to how club directors, DOCs, or operations staff search (e.g., "youth soccer scheduling software," "sports management app for clubs").</li>
-    </ul>
-  </div>
-  <h4 class="text-xl font-semibold text-[#202124] mb-3">**Social media**</h4>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Active presence on **Instagram and TikTok** with product clips, team stories, and educational posts; LinkedIn/X are earlier-stage but important for B2B buyers.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Content is promising, but there's no clear bridge from **social attention → owned traffic → demo / trial.**</li>
-    </ul>
-  </div>
-  <h4 class="text-xl font-semibold text-[#202124] mb-3">**Paid media**</h4>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">No live **paid search** or **paid social** campaigns; all traffic is organic or direct/referral.</li>
-    </ul>
-  </div>
-  <h4 class="text-xl font-semibold text-[#202124] mb-3">**Measurement & infrastructure**</h4>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Basic analytics exist, but **tracking is not yet treated as a growth product** (consistent event tracking, funnel views, and reporting for marketing decisions).</li>
-    </ul>
-  </div>
-  <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">**Goals & constraints**</h3>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">**Primary goal:** build a community and brand around Praxis while driving measurable growth in qualified demos/accounts.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">**Timing:** align with 2026 planning; you're in a **growth stage** and starting to invest externally.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">**Constraints:** startup budget, lean team; need a partner who can handle **strategy + execution** without heavy lift from internal staff.</li>
-    </ul>
-  </div>
-</section>
+        <section class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+            <h3 class="text-2xl font-medium text-[#202124] mb-4">Executive Summary</h3>
+            <p class="text-[#5f6368] leading-relaxed text-lg mb-4">
+                Praxis Sports is a sports tech platform that simplifies scheduling, communication, and operations for clubs, academies, and teams - from youth to pro. The product is strong and the team is uniquely credible (Olympians, MLS veterans), but the <strong>digital footprint is early-stage and fragmented</strong>:
+            </p>
+            <ul class="custom-bullets text-[#5f6368] leading-relaxed text-lg mb-4">
+                <li>Organic search is thin beyond branded terms; a handful of pages drive most traffic.</li>
+                <li>Social channels (especially Instagram/TikTok) show promise, but content is not yet tied to a clear funnel or narrative.</li>
+                <li>There is <strong>no paid acquisition</strong> currently running.</li>
+                <li>Tracking, attribution, and GEO/SEO foundations can be strengthened to support scale.</li>
+            </ul>
+            <p class="text-[#5f6368] leading-relaxed text-lg mb-4">
+                At the same time, Praxis has clear strategic goals:
+            </p>
+            <ul class="custom-bullets text-[#5f6368] leading-relaxed text-lg mb-4">
+                <li>Tell <strong>one coherent story</strong> about who you are, who you serve, and why you're different.</li>
+                <li>Grow a <strong>community of clubs and leaders</strong> around that story.</li>
+                <li>Turn that community into a <strong>predictable pipeline</strong> of demos, trials, and accounts - while respecting startup budgets.</li>
+            </ul>
+            <p class="text-[#5f6368] leading-relaxed text-lg mb-4">
+                iExcel will act as a <strong>performance-focused growth partner</strong>:
+            </p>
+            <ol class="list-decimal list-inside space-y-2 text-[#5f6368] leading-relaxed text-lg pl-4">
+                <li><strong>Unify the narrative</strong> across website, SEO, and social so Praxis feels like one clear, compelling brand.</li>
+                <li><strong>Build the digital foundation</strong>: on-page SEO + GEO, conversion-focused web structure, and rock-solid tracking.</li>
+                <li><strong>Stand up first scalable acquisition engines</strong>: bottom-of-funnel paid search, lightweight paid social, and targeted outbound (cold email + LinkedIn).</li>
+                <li><strong>Optimize for revenue and adoption</strong>, not vanity metrics - weekly cycles of "what we did, what we learned, what we're doing next."</li>
+            </ol>
+        </section>
 
-<section class="mb-16">
-  <h2 class="text-3xl font-bold text-[#202124] mb-6">**How We Can Help**</h2>
-  <div class="prose max-w-none">
-    <p class="text-base text-[#5f6368] leading-relaxed mb-4">In this scope, iExcel focuses on **narrative, SEO/GEO, paid acquisition, outbound, and tracking** - all tuned to Praxis' sports audience.</p>
-    <div class="overflow-x-auto">
-      <table class="min-w-full divide-y divide-gray-200">
-        <thead class="bg-gray-50">
-          <tr>
-            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Area</th>
-            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Finding</th>
-            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Opportunity (iExcel will…)</th>
-          </tr>
-        </thead>
-        <tbody class="bg-white divide-y divide-gray-200">
-          <tr>
-            <td class="px-6 py-4 whitespace-nowrap"><em class="text-[#1a73e8] font-semibold">Narrative & Positioning</em></td>
-            <td class="px-6 py-4">Strong story lives mostly in conversations and scattered social posts; "who Praxis is for" isn't crystal clear.</td>
-            <td class="px-6 py-4">Run a **Narrative & Audience Workshop** and create a *Praxis Narrative Pack* (core story, audiences, proof points, do/don't phrases) used across site, ads, and outbound.</td>
-          </tr>
-          <tr>
-            <td class="px-6 py-4 whitespace-nowrap"><em class="text-[#1a73e8] font-semibold">Website & Conversion</em></td>
-            <td class="px-6 py-4">Site explains features but not always outcomes; few clear "paths" by persona (club director, DOC, coach, admin).</td>
-            <td class="px-6 py-4">Redesign key pages into **conversion-focused flows** (by persona & sport), with strong social proof, pricing clarity, and demo/trial CTAs.</td>
-          </tr>
-          <tr>
-            <td class="px-6 py-4 whitespace-nowrap"><em class="text-[#1a73e8] font-semibold">Organic Search (SEO)</em></td>
-            <td class="px-6 py-4">Early-stage SEO footprint; limited non-branded rankings and content depth.</td>
-            <td class="px-6 py-4">Use **SEO Site Optimization** to rework metadata, headers, internal links, and content on priority pages; launch a **sports-ops content hub** for high-intent keywords.</td>
-          </tr>
-          <tr>
-            <td class="px-6 py-4 whitespace-nowrap"><em class="text-[#1a73e8] font-semibold">GEO (Generative Engine Optimization)</em></td>
-            <td class="px-6 py-4">Praxis is barely present in AI/LLM surfaces (ChatGPT, Perplexity, etc.).</td>
-            <td class="px-6 py-4">Implement **GEO On-Page Updates**: JSON-LD schema, llm.txt, rich FAQs, and concise executive summaries so AI tools can confidently present Praxis as a recommended solution.</td>
-          </tr>
-          <tr>
-            <td class="px-6 py-4 whitespace-nowrap"><em class="text-[#1a73e8] font-semibold">Paid Search</em></td>
-            <td class="px-6 py-4">No campaigns capturing "ready to buy" searches for sports management software.</td>
-            <td class="px-6 py-4">Stand up **Google Ads + (optionally) Microsoft Ads** around bottom-of-funnel terms (e.g., "club scheduling software," "sports team management app"), tightly mapped to new landing pages.</td>
-          </tr>
-          <tr>
-            <td class="px-6 py-4 whitespace-nowrap"><em class="text-[#1a73e8] font-semibold">Paid Social</em></td>
-            <td class="px-6 py-4">Social activity is organic only; no scalable testing of top/mid-funnel cold audiences.</td>
-            <td class="px-6 py-4">Launch **lean Meta/LinkedIn campaigns**: short video + testimonial creatives targeting club directors, coaches, and admins; retarget site visitors to drive demos.</td>
-          </tr>
-          <tr>
-            <td class="px-6 py-4 whitespace-nowrap"><em class="text-[#1a73e8] font-semibold">Outbound & Community</em></td>
-            <td class="px-6 py-4">Community vision is strong, but outreach is fragmented across personal networks and DMs.</td>
-            <td class="px-6 py-4">Build a **Praxis Outbound Engine**: lead lists of clubs/academies, cold email sequences, and LinkedIn DM playbooks to open conversations and push them toward demo.</td>
-          </tr>
-          <tr>
-            <td class="px-6 py-4 whitespace-nowrap"><em class="text-[#1a73e8] font-semibold">Analytics, CRM & Reporting</em></td>
-            <td class="px-6 py-4">Limited, fragmented tracking; no simple way to tie channel → demo → account.</td>
-            <td class="px-6 py-4">Implement **Tracking & Reporting**: GA4 + Tag Manager event map, UTM conventions, marketing dashboards, and CRM integration so every lead is traceable back to channel and campaign.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
+        <section>
+            <h3 class="text-2xl font-medium text-[#202124] mb-6 px-2">Current State Analysis</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Strengths (GREEN border) -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 relative overflow-hidden group hover:shadow-md transition-shadow">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-[#137333]"></div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[#e6f4ea] p-2 rounded-full mr-3">
+                            <svg class="w-6 h-6 text-[#137333]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-medium text-[#202124]">Strengths</h4>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="text-[#5f6368]"><strong class="text-[#202124]">Platform:</strong> Praxis is a sports management platform: scheduling, communication, operations; aimed at simplifying the chaos of youth and team sports.</li>
+                        <li class="text-[#5f6368]"><strong class="text-[#202124]">Broad Spectrum:</strong> You serve a broad spectrum (youth clubs, academies, schools, pro environments).</li>
+                        <li class="text-[#5f6368]"><strong class="text-[#202124]">Pricing:</strong> Praxis is priced below many competitors.</li>
+                        <li class="text-[#5f6368]"><strong class="text-[#202124]">Team:</strong> The team is a moat: co-founders with MLS experience, CRO with Olympic gold medal credentials, deep relationships in the sports ecosystem.</li>
+                        <li class="text-[#5f6368]"><strong class="text-[#202124]">Social Media:</strong> Active presence on Instagram and TikTok with product clips, team stories, and educational posts.</li>
+                    </ul>
+                </div>
 
-<section class="mb-16">
-  <h2 class="text-3xl font-bold text-[#202124] mb-6">**Tactical Plan**</h2>
-  <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">**Phase 1 - Narrative, Foundations & Tracking (Weeks 1 - 4)**</h3>
-  <h4 class="text-xl font-semibold text-[#202124] mb-3">**1. Narrative & audience alignment**</h4>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">90-minute **Narrative & Audience Workshop** with Lindsay + key team.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Deliver *Praxis Narrative Pack*:
-        <ul class="list-disc pl-6 mt-2">
-          <li class="text-base text-[#5f6368] leading-relaxed">1-page positioning summary (problem → solution → who Praxis serves).</li>
-          <li class="text-base text-[#5f6368] leading-relaxed">Audience snapshots (youth club director, DOC, college coach, academy operations).</li>
-          <li class="text-base text-[#5f6368] leading-relaxed">Key proof points (team credibility, pricing advantage, product strengths).</li>
-          <li class="text-base text-[#5f6368] leading-relaxed">Guardrails: what to emphasize/avoid in marketing language.</li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <h4 class="text-xl font-semibold text-[#202124] mb-3">**2. Website / funnel baseline**</h4>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Audit current site structure, UX, and forms.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Map **core journeys**: first-time visitor → learn → social proof → pricing → demo/trial.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Identify 2 - 3 **priority landing experiences** (e.g., "Club Ops", "Coaches", "Multi-Sport Orgs") for redesign or refinement.</li>
-    </ul>
-  </div>
-  <h4 class="text-xl font-semibold text-[#202124] mb-3">**3. Tracking & data layer**</h4>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Implement / clean up **GA4 + Google Tag Manager**:
-        <ul class="list-disc pl-6 mt-2">
-          <li class="text-base text-[#5f6368] leading-relaxed">Events for demo form views/submits, trial signups, pricing clicks, "book a call", etc.</li>
-          <li class="text-base text-[#5f6368] leading-relaxed">UTM standards for all channels.</li>
-        </ul>
-      </li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Configure a simple **marketing performance dashboard** (Looker Studio or similar).</li>
-    </ul>
-  </div>
-  <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">**Phase 2 - SEO + GEO & Site Optimization (Weeks 5 - 10)**</h3>
-  <h4 class="text-xl font-semibold text-[#202124] mb-3">**1. SEO Site Optimization (existing pages)**</h4>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Update titles, meta descriptions, H1s/H2s, and internal linking for:
-        <ul class="list-disc pl-6 mt-2">
-          <li class="text-base text-[#5f6368] leading-relaxed">Home, Product/Features, Pricing, "Who We Serve", key blog posts/resources.</li>
-        </ul>
-      </li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Add **FAQ sections** and structured data where appropriate.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Fix technical hygiene: sitemap, robots, canonical tags, core web vitals where feasible.</li>
-    </ul>
-  </div>
-  <h4 class="text-xl font-semibold text-[#202124] mb-3">**2. GEO (Generative Engine Optimization)**</h4>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Implement **JSON-LD schema**, llm.txt file, and concise **summary blocks** that LLMs can easily ingest.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Add 8 - 12 **high-quality FAQ Q&As** focused on "what is Praxis," "who uses it," "how it's priced," etc., to improve answers in AI search.</li>
-    </ul>
-  </div>
-  <h4 class="text-xl font-semibold text-[#202124] mb-3">**3. Content roadmap**</h4>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Build a **6-month editorial roadmap** of high-intent topics (e.g., "How to run a 400-team tournament without losing your mind", "Sports ops checklist for club admins").</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Ship 2 - 4 initial blog/guide pieces to start compounding organic traffic.</li>
-    </ul>
-  </div>
-  <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">**Phase 3 - Paid Search & Paid Social Activation (Weeks 8 - 16)**</h3>
-  <div class="prose max-w-none">
-    <p class="text-base text-[#5f6368] leading-relaxed mb-4">*(Phase 3 overlaps Phase 2 intentionally.)*</p>
-  </div>
-  <h4 class="text-xl font-semibold text-[#202124] mb-3">**1. Paid Search - Google Ads**</h4>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Research and select **bottom-of-funnel keyword clusters** around:
-        <ul class="list-disc pl-6 mt-2">
-          <li class="text-base text-[#5f6368] leading-relaxed">"sports management software", "youth club scheduling software", "team communication app", etc.</li>
-        </ul>
-      </li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Build campaigns with:
-        <ul class="list-disc pl-6 mt-2">
-          <li class="text-base text-[#5f6368] leading-relaxed">2 - 3 tightly themed ad groups per cluster.</li>
-          <li class="text-base text-[#5f6368] leading-relaxed">Responsive Search Ads (12 - 15 headlines, 4 descriptions) using Praxis' value props.</li>
-          <li class="text-base text-[#5f6368] leading-relaxed">Landing pages matched to intent and persona.</li>
-        </ul>
-      </li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Implement conversion tracking to **qualified demo/trial**, not just raw form fills.</li>
-    </ul>
-  </div>
-  <h4 class="text-xl font-semibold text-[#202124] mb-3">**2. Paid Social - Meta & LinkedIn (lean tests)**</h4>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Create 3 - 5 **creative concepts** using existing Praxis assets (product screens, testimonials, clips from Lindsay/MLS co-founder).</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Launch:
-        <ul class="list-disc pl-6 mt-2">
-          <li class="text-base text-[#5f6368] leading-relaxed">Meta campaigns for top/mid funnel (awareness and traffic).</li>
-          <li class="text-base text-[#5f6368] leading-relaxed">LinkedIn campaigns targeting club executives, DOCs, operations leads.</li>
-        </ul>
-      </li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Add **retargeting** (site visitors, engaged social users) to move prospects to demo.</li>
-    </ul>
-  </div>
-  <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">**Phase 4 - Outbound & Community Engine (Months 4 - 6)**</h3>
-  <h4 class="text-xl font-semibold text-[#202124] mb-3">**1. Cold email engine**</h4>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Build or refine a **prospect list** of clubs/academies/leagues by region and sport.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Write 2 - 3 **cold email sequences** (3 - 5 touches each) emphasizing problems solved, social proof, and a soft CTA ("15-minute walkthrough").</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Set up sending via your existing tools or a lightweight outbound platform; ensure compliance and deliverability.</li>
-    </ul>
-  </div>
-  <h4 class="text-xl font-semibold text-[#202124] mb-3">**2. LinkedIn community building**</h4>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Optimize **Lindsay's and other leaders' LinkedIn profiles** around Praxis narrative.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Create a **connection + DM playbook** targeting club and league decision-makers.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Repurpose top-performing TikTok/Instagram content into LinkedIn posts with more B2B framing.</li>
-    </ul>
-  </div>
-  <h4 class="text-xl font-semibold text-[#202124] mb-3">**3. Continuous optimization**</h4>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Weekly growth cycles: review metrics, identify top-performing channels/creatives, kill losers, and reallocate budget.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Quarterly planning to align with sports calendar (tryouts, tournament season, back-to-school, etc.).</li>
-    </ul>
-  </div>
-</section>
+                <!-- Opportunities (BLUE border) -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 relative overflow-hidden group hover:shadow-md transition-shadow">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-[#1a73e8]"></div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[#e8f0fe] p-2 rounded-full mr-3">
+                            <svg class="w-6 h-6 text-[#1a73e8]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-medium text-[#202124]">Opportunities</h4>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="text-[#5f6368]">• The messaging and web experience don't yet make that breadth feel coherent.</li>
+                        <li class="text-[#5f6368]">• The pricing advantage is not clearly or consistently communicated.</li>
+                        <li class="text-[#5f6368]">• The team story is underused in marketing. ("We have a very unique team… that story is not being told right now." - Lindsay Tarpley)</li>
+                        <li class="text-[#5f6368]">• Small index footprint; most organic traffic is branded or near-branded.</li>
+                        <li class="text-[#5f6368]">• Rankings have been volatile in recent months; non-branded discovery is limited.</li>
+                        <li class="text-[#5f6368]">• Site structure and content are not yet mapped to how club directors, DOCs, or operations staff search (e.g., "youth soccer scheduling software," "sports management app for clubs").</li>
+                        <li class="text-[#5f6368]">• Content is promising, but there's no clear bridge from social attention → owned traffic → demo / trial.</li>
+                        <li class="text-[#5f6368]">• No live paid search or paid social campaigns; all traffic is organic or direct/referral.</li>
+                        <li class="text-[#5f6368]">• Basic analytics exist, but tracking is not yet treated as a growth product (consistent event tracking, funnel views, and reporting for marketing decisions).</li>
+                        <li class="text-[#5f6368]">• Build a community and brand around Praxis while driving measurable growth in qualified demos/accounts.</li>
+                        <li class="text-[#5f6368]">• Align with 2026 planning; you're in a growth stage and starting to invest externally.</li>
+                        <li class="text-[#5f6368]">• Need a partner who can handle strategy + execution without heavy lift from internal staff.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-<section class="mb-16">
-  <h2 class="text-3xl font-bold text-[#202124] mb-6">**Expected Results**</h2>
-  <div class="prose max-w-none">
-    <p class="text-base text-[#5f6368] leading-relaxed mb-4">These are **targets, not guarantees** - based on Praxis' current early-stage footprint, iExcel's past experience with B2B SaaS and sports, and typical benchmarks.</p>
-  </div>
-  <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">**Infrastructure outcomes (first 6 - 8 weeks)**</h3>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Unified **narrative and messaging** used across site, ads, and outbound.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">GA4/Tag Manager fully capturing core events; baseline funnel visibility.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Priority pages optimized for SEO + GEO with improved technical hygiene.</li>
-    </ul>
-  </div>
-  <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">**Traffic & visibility (first 3 - 6 months)**</h3>
-  <div class="prose max-w-none">
-    <p class="text-base text-[#5f6368] leading-relaxed mb-4">Assuming modest but meaningful content investment and initial paid budgets:</p>
-  </div>
-  <h4 class="text-xl font-semibold text-[#202124] mb-3">**Organic search**</h4>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">2 - 3× increase in **non-branded organic traffic** (e.g., from low hundreds/month to mid/high hundreds).</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Praxis begins to appear for **sports management / club ops searches**, not just branded terms.</li>
-    </ul>
-  </div>
-  <h4 class="text-xl font-semibold text-[#202124] mb-3">**Paid media**</h4>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">1,500 - 4,000 incremental **paid clicks** over 3 months across search + social.</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Initial **CPCs** benchmarked and driven down via optimization.</li>
-    </ul>
-  </div>
-  <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">**Pipeline & revenue signals (first 3 - 6 months)**</h3>
-  <div class="prose max-w-none">
-    <ul class="list-none pl-0 mb-4">
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">30 - 80 **incremental demo/trial requests** attributable to new channels (SEO, paid, outbound).</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Early view into **channel efficiency** (demo rate, cost per qualified lead per channel).</li>
-      <li class="custom-bullet text-base text-[#5f6368] leading-relaxed">Identification of 2 - 3 **"hero" segments** (e.g., certain sports, club sizes, or regions) where Praxis closes deals at higher rates - informing next growth cycles.</li>
-    </ul>
-  </div>
-  <h3 class="text-
+        <section>
+            <h3 class="text-2xl font-medium text-[#202124] mb-6 px-2">Strategic Recommendations</h3>
+            <div class="grid md:grid-cols-1 gap-6">
+                
+                <!-- Recommendation Card 1 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h4 class="text-lg font-bold text-[#1a73e8] mb-4 flex items-center">
+                        <span class="bg-[#e8f0fe] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">1</span>
+                        Narrative & Positioning
+                    </h4>
+                    <div class="grid md:grid-cols-2 gap-8 pl-11">
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Finding</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• Strong story lives mostly in conversations and scattered social posts; "who Praxis is for" isn't crystal clear.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Opportunity (iExcel will…)</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• Run a <strong>Narrative & Audience Workshop</strong> and create a <em>Praxis Narrative Pack</em> (core story, audiences, proof points, do/don't phrases) used across site, ads, and outbound.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommendation Card 2 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h4 class="text-lg font-bold text-[#1a73e8] mb-4 flex items-center">
+                        <span class="bg-[#e8f0fe] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">2</span>
+                        Website & Conversion
+                    </h4>
+                    <div class="grid md:grid-cols-2 gap-8 pl-11">
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Finding</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• Site explains features but not always outcomes; few clear "paths" by persona (club director, DOC, coach, admin).</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Opportunity (iExcel will…)</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• Redesign key pages into <strong>conversion-focused flows</strong> (by persona & sport), with strong social proof, pricing clarity, and demo/trial CTAs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommendation Card 3 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h4 class="text-lg font-bold text-[#1a73e8] mb-4 flex items-center">
+                        <span class="bg-[#e8f0fe] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">3</span>
+                        Organic Search (SEO)
+                    </h4>
+                    <div class="grid md:grid-cols-2 gap-8 pl-11">
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Finding</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• Early-stage SEO footprint; limited non-branded rankings and content depth.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Opportunity (iExcel will…)</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• Use <strong>SEO Site Optimization</strong> to rework metadata, headers, internal links, and content on priority pages; launch a <strong>sports-ops content hub</strong> for high-intent keywords.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommendation Card 4 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h4 class="text-lg font-bold text-[#1a73e8] mb-4 flex items-center">
+                        <span class="bg-[#e8f0fe] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">4</span>
+                        GEO (Generative Engine Optimization)
+                    </h4>
+                    <div class="grid md:grid-cols-2 gap-8 pl-11">
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Finding</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• Praxis is barely present in AI/LLM surfaces (ChatGPT, Perplexity, etc.).</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Opportunity (iExcel will…)</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• Implement <strong>GEO On-Page Updates</strong>: JSON-LD schema, llm.txt, rich FAQs, and concise executive summaries so AI tools can confidently present Praxis as a recommended solution.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommendation Card 5 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h4 class="text-lg font-bold text-[#1a73e8] mb-4 flex items-center">
+                        <span class="bg-[#e8f0fe] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">5</span>
+                        Paid Search
+                    </h4>
+                    <div class="grid md:grid-cols-2 gap-8 pl-11">
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Finding</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• No campaigns capturing "ready to buy" searches for sports management software.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Opportunity (iExcel will…)</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• Stand up <strong>Google Ads + (optionally) Microsoft Ads</strong> around bottom-of-funnel terms (e.g., "club scheduling software," "sports team management app"), tightly mapped to new landing pages.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommendation Card 6 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h4 class="text-lg font-bold text-[#1a73e8] mb-4 flex items-center">
+                        <span class="bg-[#e8f0fe] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">6</span>
+                        Paid Social
+                    </h4>
+                    <div class="grid md:grid-cols-2 gap-8 pl-11">
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Finding</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• Social activity is organic only; no scalable testing of top/mid-funnel cold audiences.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Opportunity (iExcel will…)</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• Launch <strong>lean Meta/LinkedIn campaigns</strong>: short video + testimonial creatives targeting club directors, coaches, and admins; retarget site visitors to drive demos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommendation Card 7 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h4 class="text-lg font-bold text-[#1a73e8] mb-4 flex items-center">
+                        <span class="bg-[#e8f0fe] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">7</span>
+                        Outbound & Community
+                    </h4>
+                    <div class="grid md:grid-cols-2 gap-8 pl-11">
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Finding</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• Community vision is strong, but outreach is fragmented across personal networks and DMs.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Opportunity (iExcel will…)</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• Build a <strong>Praxis Outbound Engine</strong>: lead lists of clubs/academies, cold email sequences, and LinkedIn DM playbooks to open conversations and push them toward demo.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommendation Card 8 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h4 class="text-lg font-bold text-[#1a73e8] mb-4 flex items-center">
+                        <span class="bg-[#e8f0fe] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">8</span>
+                        Analytics, CRM & Reporting
+                    </h4>
+                    <div class="grid md:grid-cols-2 gap-8 pl-11">
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Finding</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• Limited, fragmented tracking; no simple way to tie channel → demo → account.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Opportunity (iExcel will…)</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• Implement <strong>Tracking & Reporting</strong>: GA4 + Tag Manager event map, UTM conventions, marketing dashboards, and CRM integration so every lead is traceable back to channel and campaign.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <h3 class="text-2xl font-medium text-[#202124] mb-6 px-2">Tactical Plan</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <div class="bg-[#e8f0fe] text-[#1a73e8] text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full inline-block mb-3">
+                        Weeks 1 - 4
+                    </div>
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">Phase 1 - Narrative, Foundations & Tracking</h4>
+                    <ul class="text-sm text-[#5f6368] space-y-2">
+                        <li>• 90-minute <strong>Narrative & Audience Workshop</strong> with Lindsay + key team.</li>
+                        <li>• Deliver <em>Praxis Narrative Pack</em>: 1-page positioning summary (problem → solution → who Praxis serves), Audience snapshots (youth club director, DOC, college coach, academy operations), Key proof points (team credibility, pricing advantage, product strengths), Guardrails: what to emphasize/avoid in marketing language.</li>
+                        <li>• Audit current site structure, UX, and forms.</li>
+                        <li>• Map <strong>core journeys</strong>: first-time visitor → learn → social proof → pricing → demo/trial.</li>
+                        <li>• Identify 2 - 3 <strong>priority landing experiences</strong> (e.g., "Club Ops", "Coaches", "Multi-Sport Orgs") for redesign or refinement.</li>
+                        <li>• Implement / clean up <strong>GA4 + Google Tag Manager</strong>: Events for demo form views/submits, trial signups, pricing clicks, "book a call", etc., UTM standards for all channels.</li>
+                        <li>• Configure a simple <strong>marketing performance dashboard</strong> (Looker Studio or similar).</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <div class="bg-[#e8f0fe] text-[#1a73e8] text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full inline-block mb-3">
+                        Weeks 5 - 10
+                    </div>
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">Phase 2 - SEO + GEO & Site Optimization</h4>
+                    <ul class="text-sm text-[#5f6368] space-y-2">
+                        <li>• Update titles, meta descriptions, H1s/H2s, and internal linking for: Home, Product/Features, Pricing, "Who We Serve", key blog posts/resources.</li>
+                        <li>• Add <strong>FAQ sections</strong> and structured data where appropriate.</li>
+                        <li>• Fix technical hygiene: sitemap, robots, canonical tags, core web vitals where feasible.</li>
+                        <li>• Implement <strong>JSON-LD schema</strong>, llm.txt file, and concise <strong>summary blocks</strong> that LLMs can easily ingest.</li>
+                        <li>• Add 8 - 12 <strong>high-quality FAQ Q&As</strong> focused on "what is Praxis," "who uses it," "how it's priced," etc., to improve answers in AI search.</li>
+                        <li>• Build a <strong>6-month editorial roadmap</strong> of high-intent topics (e.g., "How to run a 400-team tournament without losing your mind", "Sports ops checklist for club admins").</li>
+                        <li>• Ship 2 - 4 initial blog/guide pieces to start compounding organic traffic.</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <div class="bg-[#e8f0fe] text-[#1a73e8] text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full inline-block mb-3">
+                        Weeks 8 - 16
+                    </div>
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">Phase 3 - Paid Search & Paid Social Activation</h4>
+                    <ul class="text-sm text-[#5f6368] space-y-2">
+                        <li>• (Phase 3 overlaps Phase 2 intentionally.)</li>
+                        <li>• Research and select <strong>bottom-of-funnel keyword clusters</strong> around: "sports management software", "youth club scheduling software", "team communication app", etc.</li>
+                        <li>• Build campaigns with: 2 - 3 tightly themed ad groups per cluster, Responsive Search Ads (12 - 15 headlines, 4 descriptions) using Praxis' value props, Landing pages matched to intent and persona.</li>
+                        <li>• Implement conversion tracking to <strong>qualified demo/trial</strong>, not just raw form fills.</li>
+                        <li>• Create 3 - 5 <strong>creative concepts</strong> using existing Praxis assets (product screens, testimonials, clips from Lindsay/MLS co-founder).</li>
+                        <li>• Launch: Meta campaigns for top/mid funnel (awareness and traffic), LinkedIn campaigns targeting club executives, DOCs, operations leads.</li>
+                        <li>• Add <strong>retargeting</strong> (site visitors, engaged social users) to move prospects to demo.</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <div class="bg-[#e8f0fe] text-[#1a73e8] text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full inline-block mb-3">
+                        Months 4 - 6
+                    </div>
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">Phase 4 - Outbound & Community Engine</h4>
+                    <ul class="text-sm text-[#5f6368] space-y-2">
+                        <li>• Build or refine a <strong>prospect list</strong> of clubs/academies/leagues by region and sport.</li>
+                        <li>• Write 2 - 3 <strong>cold email sequences</strong> (3 - 5 touches each) emphasizing problems solved, social proof, and a soft CTA ("15-minute walkthrough").</li>
+                        <li>• Set up sending via your existing tools or a lightweight outbound platform; ensure compliance and deliverability.</li>
+                        <li>• Optimize <strong>Lindsay's and other leaders' LinkedIn profiles</strong> around Praxis narrative.</li>
+                        <li>• Create a <strong>connection + DM playbook</strong> targeting club and league decision-makers.</li>
+                        <li>• Repurpose top-performing TikTok/Instagram content into LinkedIn posts with more B2B framing.</li>
+                        <li>• Weekly growth cycles: review metrics, identify top-performing channels/creatives, kill losers, and reallocate budget.</li>
+                        <li>• Quarterly planning to align with sports calendar (tryouts, tournament season, back-to-school, etc.).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="text-2xl font-medium text-[#202124] mb-6 px-2">Expected Results</h3>
+            <p class="text-[#5f6368] leading-relaxed text-lg mb-6">
+                These are <strong>targets, not guarantees</strong> - based on Praxis' current early-stage footprint, iExcel's past experience with B2B SaaS and sports, and typical benchmarks.
+            </p>
+
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+                <h4 class="text-xl font-medium text-[#202124] mb-3">Infrastructure outcomes (first 6 - 8 weeks)</h4>
+                <ul class="space-y-2 text-sm text-[#5f6368]">
+                    <li>• Unified <strong>narrative and messaging</strong> used across site, ads, and outbound.</li>
+                    <li>• GA4/Tag Manager fully capturing core events; baseline funnel visibility.</li>
+                    <li>• Priority pages optimized for SEO + GEO with improved technical hygiene.</li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+                <h4 class="text-xl font-medium text-[#202124] mb-3">Traffic & visibility (first 3 - 6 months)</h4>
+                <p class="text-[#5f6368] text-sm mb-4">
+                    Assuming modest but meaningful content investment and initial paid budgets:
+                </p>
+                <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Organic search</h5>
+                <ul class="space-y-2 text-sm text-[#5f6368] mb-4">
+                    <li>• 2 - 3× increase in <strong>non-branded organic traffic</strong> (e.g., from low hundreds/month to mid/high hundreds).</li>
+                    <li>• Praxis begins to appear for <strong>sports management / club ops searches</strong>, not just branded terms.</li>
+                </ul>
+                <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Paid media</h5>
+                <ul class="space-y-2 text-sm text-[#5f6368]">
+                    <li>• 1,500 - 4,000 incremental <strong>paid clicks</strong> over 3 months across search + social.</li>
+                    <li>• Initial <strong>CPCs</strong> benchmarked and driven down via optimization.</li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+                <h4 class="text-xl font-medium text-[#202124] mb-3">Pipeline & revenue signals (first 3 - 6 months)</h4>
+                <ul class="space-y-2 text-sm text-[#5f6368]">
+                    <li>• 30 - 80 <strong>incremental demo/trial requests</strong> attributable to new channels (SEO, paid, outbound).</li>
+                    <li>• Early view into <strong>channel efficiency</strong> (demo rate, cost per qualified lead per channel).</li>
+                    <li>• Identification of 2 - 3 <strong>"hero" segments</strong> (e.g., certain sports, club sizes, or regions) where Praxis closes deals at higher rates - informing next growth cycles.</li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <h4 class="text-xl font-medium text-[#202124] mb-3">Brand & community</h4>
+                <ul class="space-y-2 text-sm text-[#5f6368]">
+                    <li>• More consistent <strong>storytelling</strong> about the Praxis team and mission across channels.</li>
+                    <li>• Steady growth of <strong>email list and social audiences</strong>, with clearer paths from social → owned assets → product exploration.</li>
+                    <li>• Praxis positioned as a <strong>credible, modern sports ops platform</strong> in both search results and AI-powered answers.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="text-2xl font-medium text-[#202124] mb-6 px-2">Typical Engagement Timeline</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <div class="bg-[#e8f0fe] text-[#1a73e8] text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full inline-block mb-3">
+                        Weeks 1 - 2
+                    </div>
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">Initial Setup & Audit</h4>
+                    <ul class="text-sm text-[#5f6368] space-y-2">
+                        <li>• Narrative & Audience Workshop</li>
+                        <li>• Analytics / tracking audit and plan</li>
+                        <li>• Website & funnel audit</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <div class="bg-[#e8f0fe] text-[#1a73e8] text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full inline-block mb-3">
+                        Weeks 3 - 4
+                    </div>
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">Foundational Deliverables</h4>
+                    <ul class="text-sm text-[#5f6368] space-y-2">
+                        <li>• Narrative Pack delivered</li>
+                        <li>• GA4 + GTM events implemented</li>
+                        <li>• Initial site/UX adjustments on key pages</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <div class="bg-[#e8f0fe] text-[#1a73e8] text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full inline-block mb-3">
+                        Weeks 5 - 10
+                    </div>
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">SEO & Content Buildout</h4>
+                    <ul class="text-sm text-[#5f6368] space-y-2">
+                        <li>• SEO & GEO on-page updates</li>
+                        <li>• First content pieces live</li>
+                        <li>• Marketing dashboard live</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <div class="bg-[#e8f0fe] text-[#1a73e8] text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full inline-block mb-3">
+                        Weeks 8 - 16
+                    </div>
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">Paid Media Activation</h4>
+                    <ul class="text-sm text-[#5f6368] space-y-2">
+                        <li>• Google Ads + Meta/LinkedIn campaigns launched</li>
+                        <li>• Retargeting set up</li>
+                        <li>• Weekly optimization cycles begin</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <div class="bg-[#e8f0fe] text-[#1a73e8] text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full inline-block mb-3">
+                        Months 4 - 6
+                    </div>
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">Outbound & CRO</h4>
+                    <ul class="text-sm text-[#5f6368] space-y-2">
+                        <li>• Outbound (cold email + LinkedIn) fully active</li>
+                        <li>• Deeper CRO tests on site and landing pages</li>
+                        <li>• Quarterly strategy reset and planning for next phase</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3 class="text-2xl font-medium text-[#202124] mb-6 px-2">Investment & ROI Analysis</h3>
+            <div class="bg-[#e6f4ea] rounded-xl p-8">
+                <!-- Option A -->
+                <div class="mb-8 pb-8 border-b border-[#137333]/20">
+                    <h4 class="text-2xl font-bold text-[#137333] mb-4">Option A - Full Growth Pod (Recommended)</h4>
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <h5 class="font-bold text-[#137333] mb-2">Scope</h5>
+                            <ul class="text-sm text-[#137333]/80 space-y-1">
+                                <li>• All phases outlined above:</li>
+                                <ul class="list-disc list-inside ml-4 text-xs space-y-1">
+                                    <li>Narrative & Audience Workshop + Narrative Pack</li>
+                                    <li>SEO Site Optimization (core pages) + GEO implementation</li>
+                                    <li>Google Ads + Meta/LinkedIn setup and ongoing management</li>
+                                    <li>Outbound engine (cold email + LinkedIn playbooks)</li>
+                                    <li>Tracking & Reporting (GA4, GTM, dashboards)</li>
+                                    <li>Weekly working call and monthly strategic review</li>
+                                </ul>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-[#137333] mb-2">Investment</h5>
+                            <ul class="text-sm text-[#137333]/80 space-y-1">
+                                <li><strong class="text-[#137333]">One-time Setup (first 4 - 6 weeks):</strong> <span class="text-xl font-bold">$9,000</span> (Narrative work, SEO/GEO setup, tracking implementation, initial campaign build.)</li>
+                                <li><strong class="text-[#137333]">Ongoing Monthly (months 2 - 6+):</strong> <span class="text-xl font-bold">$7,500 / month</span> (Includes channel management, optimization, content guidance, reporting, and outbound engine upkeep.)</li>
+                                <li><strong class="text-[#137333]">Ad Spend:</strong> recommended starting range <span class="text-xl font-bold">$4,000 - $8,000 / month</span> across search + social (paid directly to platforms).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="border-t border-[#137333]/20 pt-4 mt-4">
+                        <p class="text-[#137333] font-medium">Term: initial 6-month engagement, then month-to-month.</p>
+                    </div>
+                </div>
+
+                <!-- Option B -->
+                <div>
+                    <h4 class="text-2xl font-bold text-[#137333] mb-4">Option B - Foundation + SEO/GEO Sprint (Lean Start)</h4>
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <h5 class="font-bold text-[#137333] mb-2">Scope</h5>
+                            <ul class="text-sm text-[#137333]/80 space-y-1">
+                                <li>• Narrative & Audience Workshop + Narrative Pack</li>
+                                <li>• Website funnel recommendations + light CRO updates</li>
+                                <li>• SEO & GEO on-page optimization for a defined set of priority pages (e.g., 10 - 20)</li>
+                                <li>• Tracking & Reporting implementation</li>
+                                <li>• High-level paid search plan (without full ongoing management)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-[#137333] mb-2">Investment</h5>
+                            <ul class="text-sm text-[#137333]/80 space-y-1">
+                                <li><strong class="text-[#137333]">One-time Sprint (6 - 8 weeks):</strong> <span class="text-xl font-bold">$6,000</span></li>
+                                <li><strong class="text-[#137333]">Optional Monthly Support (SEO + analytics + light advisory):</strong> <span class="text-xl font-bold">$3,000 / month</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="border-t border-[#137333]/20 pt-4 mt-4">
+                        <p class="text-[#137333] font-medium">Could later be upgraded into the full Growth Pod as Praxis ramps spend.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

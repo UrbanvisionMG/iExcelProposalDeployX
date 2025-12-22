@@ -1,471 +1,562 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sprint.com - Enterprise SEO Strategy & Implementation Proposal</title>
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap');
-    
-    body {
-      font-family: 'Roboto', sans-serif;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Google Sans', sans-serif;
-    }
-    
-    /* Custom bullet styles */
-    .custom-bullet {
-      display: flex;
-      align-items: start;
-      gap: 0.75rem;
-      margin-bottom: 0.5rem;
-    }
-    
-    .custom-bullet::before {
-      content: "✓";
-      color: #137333;
-      font-weight: bold;
-      flex-shrink: 0;
-    }
-
-    .dot-bullet {
-      display: flex;
-      align-items: start;
-      gap: 0.75rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .dot-bullet::before {
-      content: "•";
-      color: #5f6368;
-      font-weight: bold;
-      flex-shrink: 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint.com SEO Strategy & Implementation Proposal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #f8f9fa; color: #202124; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Google Sans', sans-serif; }
+        .google-blue { color: #1a73e8; }
+        .bg-google-blue { background-color: #1a73e8; }
+        .bg-google-blue-light { background-color: #e8f0fe; }
+        .google-green { color: #137333; }
+        .bg-google-green { background-color: #e6f4ea; }
+        .text-dark-grey { color: #202124; }
+        .text-light-grey { color: #5f6368; }
+        
+        /* Custom Bullet Points */
+        ul.custom-bullets li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        ul.custom-bullets li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6rem;
+            width: 6px;
+            height: 6px;
+            background-color: #1a73e8;
+            border-radius: 50%;
+        }
+    </style>
 </head>
+<body class="min-h-screen flex flex-col">
 
-<body class="bg-white text-[#202124]">
-  <div class="max-w-6xl mx-auto px-6 py-12">
-    
-    <!-- HEADER: Logo + Tagline -->
-    <header class="flex items-center gap-6 mb-12 pb-6 border-b border-gray-200">
-      <img src="https://iexcel.co/wp-content/uploads/2023/01/iexcel_logo.png" 
-           alt="iExcel" 
-           class="h-12 object-contain">
-      <div class="h-10 w-px bg-gray-300"></div>
-      <span class="text-sm text-[#5f6368] font-medium tracking-wide">
-        Digital Marketing, Focused On Growth
-      </span>
+    <!-- Header / Brand Bar (STICKY) -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center">
+                <img src="https://iexcel.co/wp-content/uploads/2023/01/iexcel_logo.png" alt="iExcel Logo" class="h-10 w-auto">
+            </div>
+            <div class="text-sm font-medium text-[#5f6368] tracking-wide uppercase border-l-2 border-gray-200 pl-4">
+                Digital Marketing, Focused On Growth
+            </div>
+        </div>
     </header>
 
-    <!-- DOCUMENT CONTENT STARTS HERE -->
-    <!-- Use the component library above to format the markdown content -->
-    
-    <section class="mb-16">
-      <h1 class="text-4xl font-bold text-[#202124] mb-4">
-        <span class="font-bold">Sprint.com</span> <> iExcel
-      </h1>
-      <h2 class="text-3xl font-bold text-[#202124] mb-6">
-        <span class="font-bold">*Enterprise SEO Strategy & Implementation Proposal*</span>
-      </h2>
-      <hr class="my-8 border-t border-gray-200">
-    </section>
+    <main class="flex-grow max-w-5xl mx-auto px-6 py-10 space-y-10">
 
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-[#202124] mb-6">Executive Summary</h2>
-      <div class="prose max-w-none">
-        <p class="text-base text-[#5f6368] leading-relaxed mb-4">
-          Sprint is a major telecommunications provider with significant brand recognition and a vast digital footprint, but faces unique SEO challenges in one of the most competitive online markets. The telecom industry sees billions of monthly searches across mobile plans, internet services, device upgrades, and business solutions.
-        </p>
-        <p class="text-base text-[#5f6368] leading-relaxed mb-4">
-          Current analysis reveals Sprint has strong domain authority but <span class="text-[#1a73e8] font-semibold">untapped organic potential</span>:
-        </p>
-        <ul class="list-none pl-0 mb-4">
-          <li class="dot-bullet">Strong brand recognition but limited visibility for high-value commercial terms</li>
-          <li class="dot-bullet">Extensive product catalog that lacks SEO optimization for discovery</li>
-          <li class="dot-bullet">Thousands of store locations with minimal local SEO presence</li>
-          <li class="dot-bullet">Technical infrastructure that can support massive organic growth with proper optimization</li>
-        </ul>
-        <p class="text-base text-[#5f6368] leading-relaxed mb-4">
-          At the same time, Sprint faces intense competition from Verizon, AT&T, and T-Mobile, all investing heavily in digital marketing and search visibility.
-        </p>
-        <p class="text-base text-[#5f6368] leading-relaxed mb-4">
-          iExcel will act as Sprint's <span class="text-[#1a73e8] font-semibold">enterprise SEO growth partner</span>:
-        </p>
-        <ol class="list-none pl-0 mb-4">
-          <li class="dot-bullet"><strong>Audit and optimize technical foundation</strong> - Core Web Vitals, site architecture, and crawlability for a site of Sprint's scale</li>
-          <li class="dot-bullet"><strong>Dominate local search</strong> - Optimize 2,000+ store locations for "Sprint near me" and local service searches</li>
-          <li class="dot-bullet"><strong>Capture commercial intent</strong> - Target high-value keywords around plans, devices, and business services</li>
-          <li class="dot-bullet"><strong>Content strategy at scale</strong> - Create authoritative content hubs for 5G, business solutions, and customer education</li>
-          <li class="dot-bullet"><strong>Competitive positioning</strong> - Outrank competitors for priority terms and capture market share through search</li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-[#202124] mb-6">Current SEO Analysis</h2>
-
-      <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">Technical Foundation</h3>
-      <ul class="list-none pl-0 mb-4">
-        <li class="dot-bullet"><strong>Domain Authority</strong>: Strong (DA 85+) with established link profile</li>
-        <li class="dot-bullet"><strong>Site Speed</strong>: Opportunities for improvement, especially on mobile</li>
-        <li class="dot-bullet"><strong>Core Web Vitals</strong>: Mixed performance across different page types</li>
-        <li class="dot-bullet"><strong>Mobile Experience</strong>: Generally good but inconsistent across product pages</li>
-        <li class="dot-bullet"><strong>Schema Markup</strong>: Limited implementation for products and locations</li>
-      </ul>
-
-      <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">Content & Keywords</h3>
-      <ul class="list-none pl-0 mb-4">
-        <li class="dot-bullet"><strong>Branded Traffic</strong>: Strong performance for "Sprint" related terms</li>
-        <li class="dot-bullet"><strong>Commercial Terms</strong>: Underperforming for "cell phone plans," "unlimited data," "5G coverage"</li>
-        <li class="dot-bullet"><strong>Local Intent</strong>: Missing opportunities for location-based searches</li>
-        <li class="dot-bullet"><strong>Informational Content</strong>: Limited educational content compared to competitors</li>
-      </ul>
-
-      <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">Local SEO Status</h3>
-      <ul class="list-none pl-0 mb-4">
-        <li class="dot-bullet"><strong>Google Business Profiles</strong>: Inconsistent optimization across locations</li>
-        <li class="dot-bullet"><strong>NAP Consistency</strong>: Some discrepancies across directories</li>
-        <li class="dot-bullet"><strong>Local Citations</strong>: Opportunities for expansion</li>
-        <li class="dot-bullet"><strong>Store Page Optimization</strong>: Minimal local SEO implementation</li>
-      </ul>
-
-      <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">Competitive Landscape</h3>
-      <ul class="list-none pl-0 mb-4">
-        <li class="dot-bullet"><strong>Verizon</strong>: Strong in premium device and business solution keywords</li>
-        <li class="dot-bullet"><strong>AT&T</strong>: Dominates fiber internet and business service searches</li>
-        <li class="dot-bullet"><strong>T-Mobile</strong>: Leading in "unlimited plan" and value-focused terms</li>
-        <li class="dot-bullet"><strong>Sprint Opportunity</strong>: Capture market share through better optimization and content strategy</li>
-      </ul>
-    </section>
-
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-[#202124] mb-6">SEO Strategy & Recommendations</h2>
-
-      <div class="overflow-x-auto">
-        <table class="min-w-full divide-y divide-gray-200">
-          <thead class="bg-gray-50">
-            <tr>
-              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Area</th>
-              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Current Challenge</th>
-              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">iExcel Solution</th>
-            </tr>
-          </thead>
-          <tbody class="bg-white divide-y divide-gray-200">
-            <tr>
-              <td class="px-6 py-4 whitespace-nowrap"><em class="italic">Technical SEO</em></td>
-              <td class="px-6 py-4 whitespace-normal">Site speed issues, limited schema markup, crawl inefficiencies on large site</td>
-              <td class="px-6 py-4 whitespace-normal"><strong>Technical SEO Audit & Optimization</strong>: Core Web Vitals improvement, comprehensive schema implementation, site architecture optimization for enterprise scale</td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4 whitespace-nowrap"><em class="italic">Local SEO</em></td>
-              <td class="px-6 py-4 whitespace-normal">2,000+ locations with minimal local optimization, inconsistent GMB profiles</td>
-              <td class="px-6 py-4 whitespace-normal"><strong>Local SEO Domination</strong>: Optimize all store locations, implement location-specific landing pages, build local citation network</td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4 whitespace-nowrap"><em class="italic">Commercial Keywords</em></td>
-              <td class="px-6 py-4 whitespace-normal">Underperforming for high-value terms like "cell phone plans," "unlimited data," "business internet"</td>
-              <td class="px-6 py-4 whitespace-normal"><strong>Commercial Keyword Strategy</strong>: Target 500+ high-intent keywords with optimized landing pages and conversion-focused content</td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4 whitespace-nowrap"><em class="italic">Content Strategy</em></td>
-              <td class="px-6 py-4 whitespace-normal">Limited educational content, missing opportunities in 5G, IoT, business solutions</td>
-              <td class="px-6 py-4 whitespace-normal"><strong>Authority Content Hub</strong>: Create comprehensive resource centers for key topics, establish Sprint as thought leader in telecom innovation</td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4 whitespace-nowrap"><em class="italic">Competitive Positioning</em></td>
-              <td class="px-6 py-4 whitespace-normal">Losing search visibility to Verizon, AT&T, T-Mobile on priority terms</td>
-              <td class="px-6 py-4 whitespace-normal"><strong>Competitive SEO Campaign</strong>: Identify and target competitor keyword gaps, create superior content and user experiences</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-[#202124] mb-6">Implementation Roadmap</h2>
-
-      <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">Phase 1 - Technical Foundation & Audit (Months 1-2)</h3>
-
-      <h4 class="text-xl font-semibold text-[#202124] mb-3">Technical SEO Overhaul</h4>
-      <ul class="list-none pl-0 mb-4">
-        <li class="dot-bullet">Comprehensive technical audit of Sprint.com infrastructure</li>
-        <li class="dot-bullet">Core Web Vitals optimization across all page types</li>
-        <li class="dot-bullet">Schema markup implementation for:
-          <ul class="list-none pl-6">
-            <li class="dot-bullet">Products (mobile plans, devices, accessories)</li>
-            <li class="dot-bullet">Store locations and services</li>
-            <li class="dot-bullet">Business solutions and enterprise offerings</li>
-          </ul>
-        </li>
-        <li class="dot-bullet">Site architecture optimization for improved crawlability</li>
-        <li class="dot-bullet">Mobile-first indexing optimization</li>
-      </ul>
-
-      <h4 class="text-xl font-semibold text-[#202124] mb-3">Competitive Analysis & Keyword Research</h4>
-      <ul class="list-none pl-0 mb-4">
-        <li class="dot-bullet">Deep analysis of Verizon, AT&T, T-Mobile SEO strategies</li>
-        <li class="dot-bullet">Identification of 1,000+ target keywords across:
-          <ul class="list-none pl-6">
-            <li class="dot-bullet">Commercial terms (plans, devices, services)</li>
-            <li class="dot-bullet">Local terms (store locations, coverage areas)</li>
-            <li class="dot-bullet">Informational terms (5G, network technology, support)</li>
-          </ul>
-        </li>
-        <li class="dot-bullet">Content gap analysis and opportunity mapping</li>
-      </ul>
-
-      <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">Phase 2 - Local SEO Domination (Months 2-4)</h3>
-
-      <h4 class="text-xl font-semibold text-[#202124] mb-3">Store Location Optimization</h4>
-      <ul class="list-none pl-0 mb-4">
-        <li class="dot-bullet">Optimize Google Business Profiles for all 2,000+ locations</li>
-        <li class="dot-bullet">Create location-specific landing pages with:
-          <ul class="list-none pl-6">
-            <li class="dot-bullet">Store hours, contact information, services offered</li>
-            <li class="dot-bullet">Local coverage maps and network information</li>
-            <li class="dot-bullet">Customer reviews and testimonials</li>
-          </ul>
-        </li>
-        <li class="dot-bullet">Build comprehensive local citation network</li>
-        <li class="dot-bullet">Implement review management and response strategy</li>
-      </ul>
-
-      <h4 class="text-xl font-semibold text-[#202124] mb-3">Local Content Strategy</h4>
-      <ul class="list-none pl-0 mb-4">
-        <li class="dot-bullet">Create city and region-specific content</li>
-        <li class="dot-bullet">Local network coverage and 5G availability pages</li>
-        <li class="dot-bullet">Community involvement and sponsorship content</li>
-        <li class="dot-bullet">Local business solution case studies</li>
-      </ul>
-
-      <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">Phase 3 - Commercial Keyword Capture (Months 3-5)</h3>
-
-      <h4 class="text-xl font-semibold text-[#202124] mb-3">High-Intent Landing Pages</h4>
-      <ul class="list-none pl-0 mb-4">
-        <li class="dot-bullet">Create optimized pages for priority commercial terms:
-          <ul class="list-none pl-6">
-            <li class="dot-bullet">"Unlimited cell phone plans"</li>
-            <li class="dot-bullet">"5G network coverage"</li>
-            <li class="dot-bullet">"Business internet solutions"</li>
-            <li class="dot-bullet">"iPhone/Android deals"</li>
-          </ul>
-        </li>
-        <li class="dot-bullet">Implement conversion optimization best practices</li>
-        <li class="dot-bullet">A/B test page layouts and messaging</li>
-      </ul>
-
-      <h4 class="text-xl font-semibold text-[#202124] mb-3">Product Page Optimization</h4>
-      <ul class="list-none pl-0 mb-4">
-        <li class="dot-bullet">Optimize existing product and plan pages</li>
-        <li class="dot-bullet">Implement structured data for pricing and features</li>
-        <li class="dot-bullet">Create comparison pages vs competitors</li>
-        <li class="dot-bullet">Add customer reviews and social proof</li>
-      </ul>
-
-      <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">Phase 4 - Content Authority & Scale (Months 4-6)</h3>
-
-      <h4 class="text-xl font-semibold text-[#202124] mb-3">Educational Content Hubs</h4>
-      <ul class="list-none pl-0 mb-4">
-        <li class="dot-bullet"><strong>5G Innovation Center</strong>: Comprehensive resource on 5G technology, coverage, and applications</li>
-        <li class="dot-bullet"><strong>Business Solutions Hub</strong>: Enterprise-focused content on connectivity, IoT, and digital transformation</li>
-        <li class="dot-bullet"><strong>Customer Support Center</strong>: SEO-optimized help content and troubleshooting guides</li>
-        <li class="dot-bullet"><strong>Device & Technology Reviews</strong>: Expert reviews and comparisons of latest devices</li>
-      </ul>
-
-      <h4 class="text-xl font-semibold text-[#202124] mb-3">Link Building & PR</h4>
-      <ul class="list-none pl-0 mb-4">
-        <li class="dot-bullet">Industry publication outreach and thought leadership</li>
-        <li class="dot-bullet">Partnership content with device manufacturers</li>
-        <li class="dot-bullet">Local community and sponsorship link building</li>
-        <li class="dot-bullet">Technical content for B2B publications</li>
-      </ul>
-    </section>
-
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-[#202124] mb-6">Expected Results</h2>
-
-      <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">Traffic & Visibility Goals (6-12 months)</h3>
-      <ul class="list-none pl-0 mb-4">
-        <li class="dot-bullet"><strong>Organic Traffic Growth</strong>: 40-60% increase in non-branded organic traffic</li>
-        <li class="dot-bullet"><strong>Keyword Rankings</strong>: Top 3 positions for 200+ priority commercial terms</li>
-        <li class="dot-bullet"><strong>Local Visibility</strong>: 80%+ of store locations ranking in local pack for relevant searches</li>
-        <li class="dot-bullet"><strong>Market Share</strong>: Capture 15-25% more search visibility vs competitors in target markets</li>
-      </ul>
-
-      <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">Business Impact Projections</h3>
-      <ul class="list-none pl-0 mb-4">
-        <li class="dot-bullet"><strong>Lead Generation</strong>: 25-40% increase in online plan signups and store visits</li>
-        <li class="dot-bullet"><strong>Revenue Attribution</strong>: $2-5M in attributable revenue from organic search improvements</li>
-        <li class="dot-bullet"><strong>Brand Visibility</strong>: Improved search presence supporting overall brand awareness campaigns</li>
-        <li class="dot-bullet"><strong>Competitive Advantage</strong>: Better search positioning than 2+ major competitors for priority terms</li>
-      </ul>
-
-      <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">Technical Performance Improvements</h3>
-      <ul class="list-none pl-0 mb-4">
-        <li class="dot-bullet"><strong>Core Web Vitals</strong>: 90%+ of pages meeting Google's performance standards</li>
-        <li class="dot-bullet"><strong>Mobile Experience</strong>: Improved mobile usability scores across all page types</li>
-        <li class="dot-bullet"><strong>Site Speed</strong>: 25-40% improvement in page load times</li>
-        <li class="dot-bullet"><strong>Crawl Efficiency</strong>: Optimized site architecture reducing crawl budget waste</li>
-      </ul>
-    </section>
-
-    <section class="mb-16">
-      <div class="bg-[#e6f4ea] rounded-xl p-8">
-        <h3 class="text-2xl font-semibold text-[#137333] mb-4">Investment & Engagement Options</h3>
-
-        <div class="mb-6">
-          <h4 class="text-xl font-semibold text-[#137333] mb-3">Option A - Enterprise SEO Transformation (Recommended)</h4>
-          <ul class="list-none pl-0 mb-4">
-            <li class="dot-bullet"><strong>Scope</strong>
-              <ul class="list-none pl-6">
-                <li class="dot-bullet">Complete technical SEO overhaul and ongoing optimization</li>
-                <li class="dot-bullet">Local SEO implementation for all store locations</li>
-                <li class="dot-bullet">Commercial keyword strategy and landing page development</li>
-                <li class="dot-bullet">Authority content creation and link building</li>
-                <li class="dot-bullet">Competitive monitoring and response strategy</li>
-                <li class="dot-bullet">Monthly strategy sessions and quarterly business reviews</li>
-              </ul>
-            </li>
-            <li class="dot-bullet"><strong>Investment</strong>
-              <ul class="list-none pl-6">
-                <li class="dot-bullet"><strong>Implementation Phase (Months 1-3)</strong>: <strong>$25,000</strong>
-                  <ul class="list-none pl-6">
-                    <li class="dot-bullet">Technical audit and optimization</li>
-                    <li class="dot-bullet">Local SEO setup for all locations</li>
-                    <li class="dot-bullet">Initial content and landing page creation</li>
-                  </ul>
-                </li>
-                <li class="dot-bullet"><strong>Ongoing Optimization (Months 4+)</strong>: <strong>$15,000/month</strong>
-                  <ul class="list-none pl-6">
-                    <li class="dot-bullet">Continuous optimization and content creation</li>
-                    <li class="dot-bullet">Performance monitoring and competitive response</li>
-                    <li class="dot-bullet">Monthly reporting and strategy refinement</li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li class="dot-bullet"><strong>Timeline</strong>: 12-month initial engagement with quarterly renewals</li>
-          </ul>
+        <!-- Title Block (CENTERED) -->
+        <div class="text-center space-y-4">
+            <div class="inline-flex items-center justify-center px-3 py-1 bg-[#e8f0fe] text-[#1a73e8] rounded-full text-xs font-bold tracking-wider uppercase">
+                Company: Sprint.com
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-[#202124]">Sprint.com <> iExcel</h1>
+            <h2 class="text-2xl text-[#5f6368] font-normal">Enterprise SEO Strategy & Implementation Proposal</h2>
+            <div class="h-1 w-20 bg-[#1a73e8] mx-auto rounded-full mt-4"></div>
         </div>
 
-        <div class="mb-6">
-          <h4 class="text-xl font-semibold text-[#137333] mb-3">Option B - Technical + Commercial Focus</h4>
-          <ul class="list-none pl-0 mb-4">
-            <li class="dot-bullet"><strong>Scope</strong>
-              <ul class="list-none pl-6">
-                <li class="dot-bullet">Technical SEO foundation and Core Web Vitals optimization</li>
-                <li class="dot-bullet">Commercial keyword strategy for priority terms</li>
-                <li class="dot-bullet">Product page optimization and conversion improvements</li>
-                <li class="dot-bullet">Basic local SEO for top 100 store locations</li>
-                <li class="dot-bullet">Quarterly performance reviews</li>
-              </ul>
-            </li>
-            <li class="dot-bullet"><strong>Investment</strong>
-              <ul class="list-none pl-6">
-                <li class="dot-bullet"><strong>Implementation Phase (Months 1-2)</strong>: <strong>$15,000</strong></li>
-                <li class="dot-bullet"><strong>Ongoing Support (Months 3+)</strong>: <strong>$8,500/month</strong></li>
-              </ul>
-            </li>
-            <li class="dot-bullet"><strong>Timeline</strong>: 6-month initial engagement</li>
-          </ul>
-        </div>
+        <!-- Executive Summary (White Card) -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+            <h3 class="text-2xl font-medium text-[#202124] mb-4">Executive Summary</h3>
+            <p class="text-[#5f6368] leading-relaxed text-lg">
+                Sprint is a major telecommunications provider with significant brand recognition and a vast digital footprint, but faces unique SEO challenges in one of the most competitive online markets. The telecom industry sees billions of monthly searches across mobile plans, internet services, device upgrades, and business solutions.
+            </p>
+            <p class="text-[#5f6368] leading-relaxed text-lg mt-4">
+                Current analysis reveals Sprint has strong domain authority but <strong>untapped organic potential</strong>:
+            </p>
+            <ul class="custom-bullets text-[#5f6368] leading-relaxed text-lg pl-4 mt-2">
+                <li>Strong brand recognition but limited visibility for high-value commercial terms</li>
+                <li>Extensive product catalog that lacks SEO optimization for discovery</li>
+                <li>Thousands of store locations with minimal local SEO presence</li>
+                <li>Technical infrastructure that can support massive organic growth with proper optimization</li>
+            </ul>
+            <p class="text-[#5f6368] leading-relaxed text-lg mt-4">
+                At the same time, Sprint faces intense competition from Verizon, AT&T, and T-Mobile, all investing heavily in digital marketing and search visibility.
+            </p>
+            <p class="text-[#5f6368] leading-relaxed text-lg mt-4">
+                iExcel will act as Sprint's <strong>enterprise SEO growth partner</strong>:
+            </p>
+            <ul class="custom-bullets text-[#5f6368] leading-relaxed text-lg pl-4 mt-2">
+                <li><strong>Audit and optimize technical foundation</strong> - Core Web Vitals, site architecture, and crawlability for a site of Sprint's scale</li>
+                <li><strong>Dominate local search</strong> - Optimize 2,000+ store locations for "Sprint near me" and local service searches</li>
+                <li><strong>Capture commercial intent</strong> - Target high-value keywords around plans, devices, and business services</li>
+                <li><strong>Content strategy at scale</strong> - Create authoritative content hubs for 5G, business solutions, and customer education</li>
+                <li><strong>Competitive positioning</strong> - Outrank competitors for priority terms and capture market share through search</li>
+            </ul>
+        </section>
 
-        <div>
-          <h4 class="text-xl font-semibold text-[#137333] mb-3">Option C - Local SEO Specialist Program</h4>
-          <ul class="list-none pl-0 mb-4">
-            <li class="dot-bullet"><strong>Scope</strong>
-              <ul class="list-none pl-6">
-                <li class="dot-bullet">Focus specifically on local SEO domination</li>
-                <li class="dot-bullet">All 2,000+ store location optimization</li>
-                <li class="dot-bullet">Local content strategy and citation building</li>
-                <li class="dot-bullet">Google Business Profile management</li>
-                <li class="dot-bullet">Local competitive analysis and positioning</li>
-              </ul>
-            </li>
-            <li class="dot-bullet"><strong>Investment</strong>
-              <ul class="list-none pl-6">
-                <li class="dot-bullet"><strong>Setup Phase</strong>: <strong>$12,000</strong></li>
-                <li class="dot-bullet"><strong>Monthly Management</strong>: <strong>$6,000/month</strong></li>
-              </ul>
-            </li>
-            <li class="dot-bullet"><strong>Timeline</strong>: 9-month program</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+        <!-- Current State Analysis (Two Cards with Colored Left Borders) -->
+        <section>
+            <h3 class="text-2xl font-medium text-[#202124] mb-6 px-2">Current SEO Analysis</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Strengths (GREEN border) -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 relative overflow-hidden group hover:shadow-md transition-shadow">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-[#137333]"></div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[#e6f4ea] p-2 rounded-full mr-3">
+                            <svg class="w-6 h-6 text-[#137333]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-medium text-[#202124]">Strengths</h4>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="text-[#5f6368]"><strong class="text-[#202124]">Domain Authority:</strong> Strong (DA 85+) with established link profile</li>
+                        <li class="text-[#5f6368]"><strong class="text-[#202124]">Branded Traffic:</strong> Strong performance for "Sprint" related terms</li>
+                        <li class="text-[#5f6368]"><strong class="text-[#202124]">Mobile Experience:</strong> Generally good but inconsistent across product pages</li>
+                    </ul>
+                </div>
 
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-[#202124] mb-6">Why iExcel for Sprint's SEO</h2>
+                <!-- Opportunities (BLUE border) -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 relative overflow-hidden group hover:shadow-md transition-shadow">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-[#1a73e8]"></div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[#e8f0fe] p-2 rounded-full mr-3">
+                            <svg class="w-6 h-6 text-[#1a73e8]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-medium text-[#202124]">Opportunities</h4>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="text-[#5f6368]"><strong>Site Speed:</strong> Opportunities for improvement, especially on mobile</li>
+                        <li class="text-[#5f6368]"><strong>Core Web Vitals:</strong> Mixed performance across different page types</li>
+                        <li class="text-[#5f6368]"><strong>Schema Markup:</strong> Limited implementation for products and locations</li>
+                        <li class="text-[#5f6368]"><strong>Commercial Terms:</strong> Underperforming for "cell phone plans," "unlimited data," "5G coverage"</li>
+                        <li class="text-[#5f6368]"><strong>Local Intent:</strong> Missing opportunities for location-based searches</li>
+                        <li class="text-[#5f6368]"><strong>Informational Content:</strong> Limited educational content compared to competitors</li>
+                        <li class="text-[#5f6368]"><strong>Google Business Profiles:</strong> Inconsistent optimization across locations</li>
+                        <li class="text-[#5f6368]"><strong>NAP Consistency:</strong> Some discrepancies across directories</li>
+                        <li class="text-[#5f6368]"><strong>Local Citations:</strong> Opportunities for expansion</li>
+                        <li class="text-[#5f6368]"><strong>Store Page Optimization:</strong> Minimal local SEO implementation</li>
+                        <li class="text-[#5f6368]"><strong>Verizon:</strong> Strong in premium device and business solution keywords</li>
+                        <li class="text-[#5f6368]"><strong>AT&T:</strong> Dominates fiber internet and business service searches</li>
+                        <li class="text-[#5f6368]"><strong>T-Mobile:</strong> Leading in "unlimited plan" and value-focused terms</li>
+                        <li class="text-[#5f6368]"><strong>Sprint Opportunity:</strong> Capture market share through better optimization and content strategy</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-[#f8f9fa] rounded-xl p-6 hover:shadow-md transition">
-          <h3 class="text-xl font-semibold text-[#202124] mb-4">Enterprise Experience</h3>
-          <ul class="list-none pl-0 mb-4">
-            <li class="dot-bullet">Managed SEO for Fortune 500 companies with complex technical requirements</li>
-            <li class="dot-bullet">Experience with large-scale local SEO implementations (1,000+ locations)</li>
-            <li class="dot-bullet">Proven track record in competitive industries (telecom, finance, healthcare)</li>
-          </ul>
-        </div>
+        <!-- Strategic Recommendations (Numbered Blue Circles) -->
+        <section>
+            <h3 class="text-2xl font-medium text-[#202124] mb-6 px-2">SEO Strategy & Recommendations</h3>
+            <div class="grid md:grid-cols-1 gap-6">
+                
+                <!-- Recommendation Card 1 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h4 class="text-lg font-bold text-[#1a73e8] mb-4 flex items-center">
+                        <span class="bg-[#e8f0fe] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">1</span>
+                        Technical SEO
+                    </h4>
+                    <div class="grid md:grid-cols-2 gap-8 pl-11">
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Current Challenge</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• Site speed issues, limited schema markup, crawl inefficiencies on large site</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">iExcel Solution</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• <strong>Technical SEO Audit & Optimization</strong>: Core Web Vitals improvement, comprehensive schema implementation, site architecture optimization for enterprise scale</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="bg-[#f8f9fa] rounded-xl p-6 hover:shadow-md transition">
-          <h3 class="text-xl font-semibold text-[#202124] mb-4">Technical Expertise</h3>
-          <ul class="list-none pl-0 mb-4">
-            <li class="dot-bullet">Advanced technical SEO capabilities for enterprise-level sites</li>
-            <li class="dot-bullet">Core Web Vitals optimization and performance engineering</li>
-            <li class="dot-bullet">Schema markup and structured data implementation at scale</li>
-          </ul>
-        </div>
+                <!-- Recommendation Card 2 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h4 class="text-lg font-bold text-[#1a73e8] mb-4 flex items-center">
+                        <span class="bg-[#e8f0fe] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">2</span>
+                        Local SEO
+                    </h4>
+                    <div class="grid md:grid-cols-2 gap-8 pl-11">
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Current Challenge</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• 2,000+ locations with minimal local optimization, inconsistent GMB profiles</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">iExcel Solution</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• <strong>Local SEO Domination</strong>: Optimize all store locations, implement location-specific landing pages, build local citation network</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="bg-[#f8f9fa] rounded-xl p-6 hover:shadow-md transition">
-          <h3 class="text-xl font-semibold text-[#202124] mb-4">Competitive Intelligence</h3>
-          <ul class="list-none pl-0 mb-4">
-            <li class="dot-bullet">Deep understanding of telecom industry SEO landscape</li>
-            <li class="dot-bullet">Proven strategies for outranking major competitors</li>
-            <li class="dot-bullet">Real-time competitive monitoring and response capabilities</li>
-          </ul>
-        </div>
+                <!-- Recommendation Card 3 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h4 class="text-lg font-bold text-[#1a73e8] mb-4 flex items-center">
+                        <span class="bg-[#e8f0fe] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">3</span>
+                        Commercial Keywords
+                    </h4>
+                    <div class="grid md:grid-cols-2 gap-8 pl-11">
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Current Challenge</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• Underperforming for high-value terms like "cell phone plans," "unlimited data," "business internet"</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">iExcel Solution</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• <strong>Commercial Keyword Strategy</strong>: Target 500+ high-intent keywords with optimized landing pages and conversion-focused content</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="bg-[#f8f9fa] rounded-xl p-6 hover:shadow-md transition">
-          <h3 class="text-xl font-semibold text-[#202124] mb-4">Results-Driven Approach</h3>
-          <ul class="list-none pl-0 mb-4">
-            <li class="dot-bullet">Focus on revenue-driving keywords and conversions</li>
-            <li class="dot-bullet">Transparent reporting with business impact metrics</li>
-            <li class="dot-bullet">Agile optimization based on performance data</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+                <!-- Recommendation Card 4 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h4 class="text-lg font-bold text-[#1a73e8] mb-4 flex items-center">
+                        <span class="bg-[#e8f0fe] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">4</span>
+                        Content Strategy
+                    </h4>
+                    <div class="grid md:grid-cols-2 gap-8 pl-11">
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Current Challenge</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• Limited educational content, missing opportunities in 5G, IoT, business solutions</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">iExcel Solution</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• <strong>Authority Content Hub</strong>: Create comprehensive resource centers for key topics, establish Sprint as thought leader in telecom innovation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-[#202124] mb-6">Next Steps</h2>
+                <!-- Recommendation Card 5 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h4 class="text-lg font-bold text-[#1a73e8] mb-4 flex items-center">
+                        <span class="bg-[#e8f0fe] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">5</span>
+                        Competitive Positioning
+                    </h4>
+                    <div class="grid md:grid-cols-2 gap-8 pl-11">
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">Current Challenge</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• Losing search visibility to Verizon, AT&T, T-Mobile on priority terms</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-medium text-[#202124] mb-2 border-b border-gray-100 pb-1">iExcel Solution</h5>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• <strong>Competitive SEO Campaign</strong>: Identify and target competitor keyword gaps, create superior content and user experiences</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-[#f8f9fa] rounded-xl p-6">
-          <div class="space-y-3">
-            <div class="custom-bullet">Technical Audit: Comprehensive analysis of current SEO foundation</div>
-            <div class="custom-bullet">Competitive Benchmarking: Detailed comparison with Verizon, AT&T, T-Mobile</div>
-            <div class="custom-bullet">Opportunity Sizing: Quantify potential traffic and revenue impact</div>
-            <div class="custom-bullet">Implementation Planning: Detailed project timeline and resource allocation</div>
-            <div class="custom-bullet">Kickoff Meeting: Align on goals, expectations, and success metrics</div>
-          </div>
-        </div>
-      </div>
+            </div>
+        </section>
 
-      <p class="mt-8 text-base text-[#5f6368] leading-relaxed">
-        <span class="font-semibold">Ready to dominate telecom search results?</span> Let's discuss how iExcel can drive Sprint's organic growth and competitive positioning.
-      </p>
-    </section>
-    
-  </div>
+        <!-- Timeline/Phases (4-Column Grid) -->
+        <section>
+            <h3 class="text-2xl font-medium text-[#202124] mb-6 px-2">Implementation Roadmap</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <div class="bg-[#e8f0fe] text-[#1a73e8] text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full inline-block mb-3">
+                        Months 1-2
+                    </div>
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">Phase 1 - Technical Foundation & Audit</h4>
+                    <ul class="text-sm text-[#5f6368] space-y-2">
+                        <li>• <strong>Technical SEO Overhaul</strong></li>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>Comprehensive technical audit of Sprint.com infrastructure</li>
+                            <li>Core Web Vitals optimization across all page types</li>
+                            <li>Schema markup implementation for:</li>
+                            <ul class="list-disc list-inside ml-4">
+                                <li>Products (mobile plans, devices, accessories)</li>
+                                <li>Store locations and services</li>
+                                <li>Business solutions and enterprise offerings</li>
+                            </ul>
+                            <li>Site architecture optimization for improved crawlability</li>
+                            <li>Mobile-first indexing optimization</li>
+                        </ul>
+                        <li>• <strong>Competitive Analysis & Keyword Research</strong></li>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>Deep analysis of Verizon, AT&T, T-Mobile SEO strategies</li>
+                            <li>Identification of 1,000+ target keywords across:</li>
+                            <ul class="list-disc list-inside ml-4">
+                                <li>Commercial terms (plans, devices, services)</li>
+                                <li>Local terms (store locations, coverage areas)</li>
+                                <li>Informational terms (5G, network technology, support)</li>
+                            </ul>
+                            <li>Content gap analysis and opportunity mapping</li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <div class="bg-[#e8f0fe] text-[#1a73e8] text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full inline-block mb-3">
+                        Months 2-4
+                    </div>
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">Phase 2 - Local SEO Domination</h4>
+                    <ul class="text-sm text-[#5f6368] space-y-2">
+                        <li>• <strong>Store Location Optimization</strong></li>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>Optimize Google Business Profiles for all 2,000+ locations</li>
+                            <li>Create location-specific landing pages with:</li>
+                            <ul class="list-disc list-inside ml-4">
+                                <li>Store hours, contact information, services offered</li>
+                                <li>Local coverage maps and network information</li>
+                                <li>Customer reviews and testimonials</li>
+                            </ul>
+                            <li>Build comprehensive local citation network</li>
+                            <li>Implement review management and response strategy</li>
+                        </ul>
+                        <li>• <strong>Local Content Strategy</strong></li>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>Create city and region-specific content</li>
+                            <li>Local network coverage and 5G availability pages</li>
+                            <li>Community involvement and sponsorship content</li>
+                            <li>Local business solution case studies</li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <div class="bg-[#e8f0fe] text-[#1a73e8] text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full inline-block mb-3">
+                        Months 3-5
+                    </div>
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">Phase 3 - Commercial Keyword Capture</h4>
+                    <ul class="text-sm text-[#5f6368] space-y-2">
+                        <li>• <strong>High-Intent Landing Pages</strong></li>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>Create optimized pages for priority commercial terms:</li>
+                            <ul class="list-disc list-inside ml-4">
+                                <li>"Unlimited cell phone plans"</li>
+                                <li>"5G network coverage"</li>
+                                <li>"Business internet solutions"</li>
+                                <li>"iPhone/Android deals"</li>
+                            </ul>
+                            <li>Implement conversion optimization best practices</li>
+                            <li>A/B test page layouts and messaging</li>
+                        </ul>
+                        <li>• <strong>Product Page Optimization</strong></li>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>Optimize existing product and plan pages</li>
+                            <li>Implement structured data for pricing and features</li>
+                            <li>Create comparison pages vs competitors</li>
+                            <li>Add customer reviews and social proof</li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <div class="bg-[#e8f0fe] text-[#1a73e8] text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full inline-block mb-3">
+                        Months 4-6
+                    </div>
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">Phase 4 - Content Authority & Scale</h4>
+                    <ul class="text-sm text-[#5f6368] space-y-2">
+                        <li>• <strong>Educational Content Hubs</strong></li>
+                        <ul class="list-disc list-inside ml-4">
+                            <li><strong>5G Innovation Center</strong>: Comprehensive resource on 5G technology, coverage, and applications</li>
+                            <li><strong>Business Solutions Hub</strong>: Enterprise-focused content on connectivity, IoT, and digital transformation</li>
+                            <li><strong>Customer Support Center</strong>: SEO-optimized help content and troubleshooting guides</li>
+                            <li><strong>Device & Technology Reviews</strong>: Expert reviews and comparisons of latest devices</li>
+                        </ul>
+                        <li>• <strong>Link Building & PR</strong></li>
+                        <ul class="list-disc list-inside ml-4">
+                            <li>Industry publication outreach and thought leadership</li>
+                            <li>Partnership content with device manufacturers</li>
+                            <li>Local community and sponsorship link building</li>
+                            <li>Technical content for B2B publications</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expected Results (Custom Section) -->
+        <section>
+            <h3 class="text-2xl font-medium text-[#202124] mb-6 px-2">Expected Results</h3>
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 space-y-6">
+                <div>
+                    <h4 class="text-xl font-medium text-[#202124] mb-3">Traffic & Visibility Goals (6-12 months)</h4>
+                    <ul class="custom-bullets text-sm text-[#5f6368]">
+                        <li><strong>Organic Traffic Growth</strong>: 40-60% increase in non-branded organic traffic</li>
+                        <li><strong>Keyword Rankings</strong>: Top 3 positions for 200+ priority commercial terms</li>
+                        <li><strong>Local Visibility</strong>: 80%+ of store locations ranking in local pack for relevant searches</li>
+                        <li><strong>Market Share</strong>: Capture 15-25% more search visibility vs competitors in target markets</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-medium text-[#202124] mb-3">Business Impact Projections</h4>
+                    <ul class="custom-bullets text-sm text-[#5f6368]">
+                        <li><strong>Lead Generation</strong>: 25-40% increase in online plan signups and store visits</li>
+                        <li><strong>Revenue Attribution</strong>: $2-5M in attributable revenue from organic search improvements</li>
+                        <li><strong>Brand Visibility</strong>: Improved search presence supporting overall brand awareness campaigns</li>
+                        <li><strong>Competitive Advantage</strong>: Better search positioning than 2+ major competitors for priority terms</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-medium text-[#202124] mb-3">Technical Performance Improvements</h4>
+                    <ul class="custom-bullets text-sm text-[#5f6368]">
+                        <li><strong>Core Web Vitals</strong>: 90%+ of pages meeting Google's performance standards</li>
+                        <li><strong>Mobile Experience</strong>: Improved mobile usability scores across all page types</li>
+                        <li><strong>Site Speed</strong>: 25-40% improvement in page load times</li>
+                        <li><strong>Crawl Efficiency</strong>: Optimized site architecture reducing crawl budget waste</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment & ROI (Green Highlight Banner) - Adapted for Multiple Options -->
+        <section>
+            <h3 class="text-2xl font-medium text-[#202124] mb-6 px-2">Investment & Engagement Options</h3>
+
+            <!-- Option A - Enterprise SEO Transformation (Recommended) -->
+            <h4 class="text-xl font-medium text-[#202124] mb-4 px-2">Option A - Enterprise SEO Transformation (Recommended)</h4>
+            <div class="bg-[#e6f4ea] rounded-xl p-8 mb-8">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <p class="text-3xl font-bold text-[#137333]">$25,000</p>
+                        <p class="text-sm text-[#137333]/80">Implementation Phase (Months 1-3)</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-[#137333]">$15,000/month</p>
+                        <p class="text-sm text-[#137333]/80">Ongoing Optimization (Months 4+)</p>
+                    </div>
+                </div>
+                <div class="border-t border-[#137333]/20 pt-4 mt-4">
+                    <p class="text-[#137333] font-medium">
+                        <strong>Scope</strong>: Complete technical SEO overhaul and ongoing optimization, Local SEO implementation for all store locations, Commercial keyword strategy and landing page development, Authority content creation and link building, Competitive monitoring and response strategy, Monthly strategy sessions and quarterly business reviews. 
+                        <strong>Timeline</strong>: 12-month initial engagement with quarterly renewals.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Option B - Technical + Commercial Focus -->
+            <h4 class="text-xl font-medium text-[#202124] mb-4 px-2">Option B - Technical + Commercial Focus</h4>
+            <div class="bg-[#e6f4ea] rounded-xl p-8 mb-8">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <p class="text-3xl font-bold text-[#137333]">$15,000</p>
+                        <p class="text-sm text-[#137333]/80">Implementation Phase (Months 1-2)</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-[#137333]">$8,500/month</p>
+                        <p class="text-sm text-[#137333]/80">Ongoing Support (Months 3+)</p>
+                    </div>
+                </div>
+                <div class="border-t border-[#137333]/20 pt-4 mt-4">
+                    <p class="text-[#137333] font-medium">
+                        <strong>Scope</strong>: Technical SEO foundation and Core Web Vitals optimization, Commercial keyword strategy for priority terms, Product page optimization and conversion improvements, Basic local SEO for top 100 store locations, Quarterly performance reviews. 
+                        <strong>Timeline</strong>: 6-month initial engagement.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Option C - Local SEO Specialist Program -->
+            <h4 class="text-xl font-medium text-[#202124] mb-4 px-2">Option C - Local SEO Specialist Program</h4>
+            <div class="bg-[#e6f4ea] rounded-xl p-8">
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <p class="text-3xl font-bold text-[#137333]">$12,000</p>
+                        <p class="text-sm text-[#137333]/80">Setup Phase</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-[#137333]">$6,000/month</p>
+                        <p class="text-sm text-[#137333]/80">Monthly Management</p>
+                    </div>
+                </div>
+                <div class="border-t border-[#137333]/20 pt-4 mt-4">
+                    <p class="text-[#137333] font-medium">
+                        <strong>Scope</strong>: Focus specifically on local SEO domination, All 2,000+ store location optimization, Local content strategy and citation building, Google Business Profile management, Local competitive analysis and positioning. 
+                        <strong>Timeline</strong>: 9-month program.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us (3-Column Cards) -->
+        <section>
+            <h3 class="text-2xl font-medium text-[#202124] mb-6 px-2">Why iExcel for Sprint's SEO</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">Enterprise Experience</h4>
+                    <p class="text-sm text-[#5f6368]">Managed SEO for Fortune 500 companies with complex technical requirements</p>
+                    <p class="text-sm text-[#5f6368] mt-2">Experience with large-scale local SEO implementations (1,000+ locations)</p>
+                    <p class="text-sm text-[#5f6368] mt-2">Proven track record in competitive industries (telecom, finance, healthcare)</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">Technical Expertise</h4>
+                    <p class="text-sm text-[#5f6368]">Advanced technical SEO capabilities for enterprise-level sites</p>
+                    <p class="text-sm text-[#5f6368] mt-2">Core Web Vitals optimization and performance engineering</p>
+                    <p class="text-sm text-[#5f6368] mt-2">Schema markup and structured data implementation at scale</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">Competitive Intelligence</h4>
+                    <p class="text-sm text-[#5f6368]">Deep understanding of telecom industry SEO landscape</p>
+                    <p class="text-sm text-[#5f6368] mt-2">Proven strategies for outranking major competitors</p>
+                    <p class="text-sm text-[#5f6368] mt-2">Real-time competitive monitoring and response capabilities</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">Results-Driven Approach</h4>
+                    <p class="text-sm text-[#5f6368]">Focus on revenue-driving keywords and conversions</p>
+                    <p class="text-sm text-[#5f6368] mt-2">Transparent reporting with business impact metrics</p>
+                    <p class="text-sm text-[#5f6368] mt-2">Agile optimization based on performance data</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Steps (Ordered List) -->
+        <section>
+            <h3 class="text-2xl font-medium text-[#202124] mb-6 px-2">Next Steps</h3>
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+                <ol class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="bg-[#e8f0fe] text-[#1a73e8] font-bold rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">1</span>
+                        <div>
+                            <strong class="text-[#202124]">Technical Audit</strong>
+                            <p class="text-[#5f6368] text-sm mt-1">Comprehensive analysis of current SEO foundation</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-[#e8f0fe] text-[#1a73e8] font-bold rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">2</span>
+                        <div>
+                            <strong class="text-[#202124]">Competitive Benchmarking</strong>
+                            <p class="text-[#5f6368] text-sm mt-1">Detailed comparison with Verizon, AT&T, T-Mobile</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-[#e8f0fe] text-[#1a73e8] font-bold rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">3</span>
+                        <div>
+                            <strong class="text-[#202124]">Opportunity Sizing</strong>
+                            <p class="text-[#5f6368] text-sm mt-1">Quantify potential traffic and revenue impact</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-[#e8f0fe] text-[#1a73e8] font-bold rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">4</span>
+                        <div>
+                            <strong class="text-[#202124]">Implementation Planning</strong>
+                            <p class="text-[#5f6368] text-sm mt-1">Detailed project timeline and resource allocation</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-[#e8f0fe] text-[#1a73e8] font-bold rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">5</span>
+                        <div>
+                            <strong class="text-[#202124]">Kickoff Meeting</strong>
+                            <p class="text-[#5f6368] text-sm mt-1">Align on goals, expectations, and success metrics</p>
+                        </div>
+                    </li>
+                </ol>
+                <p class="text-[#5f6368] text-lg mt-8 text-center">
+                    <strong>Ready to dominate telecom search results?</strong> Let's discuss how iExcel can drive Sprint's organic growth and competitive positioning.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
 </body>
 </html>

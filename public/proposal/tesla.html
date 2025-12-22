@@ -1,237 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tesla - Digital Marketing Strategy</title>
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap');
-    
-    body {
-      font-family: 'Roboto', sans-serif;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Google Sans', sans-serif;
-    }
-    
-    /* Custom bullet styles */
-    .custom-bullet {
-      display: flex;
-      align-items: start;
-      gap: 0.75rem;
-      margin-bottom: 0.5rem;
-    }
-    
-    .custom-bullet::before {
-      content: "✓";
-      color: #137333;
-      font-weight: bold;
-      flex-shrink: 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Digital Marketing Strategy Proposal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #f8f9fa; color: #202124; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Google Sans', sans-serif; }
+        .google-blue { color: #1a73e8; }
+        .bg-google-blue { background-color: #1a73e8; }
+        .bg-google-blue-light { background-color: #e8f0fe; }
+        .google-green { color: #137333; }
+        .bg-google-green { background-color: #e6f4ea; }
+        .text-dark-grey { color: #202124; }
+        .text-light-grey { color: #5f6368; }
+        
+        /* Custom Bullet Points */
+        ul.custom-bullets li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        ul.custom-bullets li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6rem;
+            width: 6px;
+            height: 6px;
+            background-color: #1a73e8;
+            border-radius: 50%;
+        }
+    </style>
 </head>
+<body class="min-h-screen flex flex-col">
 
-<body class="bg-white text-[#202124]">
-  <div class="max-w-6xl mx-auto px-6 py-12">
-    
-    <!-- HEADER: Logo + Tagline -->
-    <header class="flex items-center gap-6 mb-12 pb-6 border-b border-gray-200">
-      <img src="https://iexcel.co/wp-content/uploads/2023/01/iexcel_logo.png" 
-           alt="iExcel" 
-           class="h-12 object-contain">
-      <div class="h-10 w-px bg-gray-300"></div>
-      <span class="text-sm text-[#5f6368] font-medium tracking-wide">
-        Digital Marketing, Focused On Growth
-      </span>
+    <!-- Header / Brand Bar (STICKY) -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center">
+                <img src="https://iexcel.co/wp-content/uploads/2023/01/iexcel_logo.png" alt="iExcel Logo" class="h-10 w-auto">
+            </div>
+            <div class="text-sm font-medium text-[#5f6368] tracking-wide uppercase border-l-2 border-gray-200 pl-4">
+                Digital Marketing, Focused On Growth
+            </div>
+        </div>
     </header>
 
-    <!-- DOCUMENT CONTENT STARTS HERE -->
-    <!-- Use the component library above to format the markdown content -->
-    
-    <section class="mb-16">
-      <h1 class="text-4xl font-bold text-[#202124] mb-4">Digital Marketing Strategy for Tesla</h1>
-    </section>
+    <main class="flex-grow max-w-5xl mx-auto px-6 py-10 space-y-10">
 
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-[#202124] mb-6">Executive Summary</h2>
-      <div class="prose max-w-none">
-        <p class="text-base text-[#5f6368] leading-relaxed mb-4">
-          Tesla's revolutionary approach to sustainable energy requires a marketing strategy that matches its innovation. This proposal outlines a comprehensive digital marketing approach to amplify Tesla's brand presence and drive qualified leads.
-        </p>
-      </div>
-    </section>
-
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-[#202124] mb-6">Current State Analysis</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Strengths Card -->
-        <div class="bg-[#f8f9fa] rounded-xl p-6">
-          <h3 class="text-xl font-semibold text-[#202124] mb-4">Strengths</h3>
-          <div class="bg-white rounded-lg p-6 border border-gray-100">
-            <div class="space-y-3">
-              <div class="custom-bullet">Brand authority in electric vehicle market</div>
-              <div class="custom-bullet">Strong social media presence with CEO thought leadership</div>
-              <div class="custom-bullet">Customer advocacy and word-of-mouth marketing</div>
-              <div class="custom-bullet">Innovation-first reputation</div>
+        <!-- Title Block (CENTERED) -->
+        <div class="text-center space-y-4">
+            <div class="inline-flex items-center justify-center px-3 py-1 bg-[#e8f0fe] text-[#1a73e8] rounded-full text-xs font-bold tracking-wider uppercase">
+                Company: Tesla
             </div>
-          </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-[#202124]">Digital Marketing Strategy for Tesla</h1>
+            <h2 class="text-2xl text-[#5f6368] font-normal">Digital Marketing Strategy</h2>
+            <div class="h-1 w-20 bg-[#1a73e8] mx-auto rounded-full mt-4"></div>
         </div>
-        
-        <!-- Opportunities Card -->
-        <div class="bg-[#f8f9fa] rounded-xl p-6">
-          <h3 class="text-xl font-semibold text-[#202124] mb-4">Opportunities</h3>
-          <div class="bg-white rounded-lg p-6 border border-gray-100">
-            <div class="space-y-3">
-              <div class="flex items-start gap-3">
-                <span class="text-[#1a73e8]">→</span>
-                <span class="text-[#5f6368]">Enhanced content marketing for new market segments</span>
-              </div>
-              <div class="flex items-start gap-3">
-                <span class="text-[#1a73e8]">→</span>
-                <span class="text-[#5f6368]">Improved local SEO for service centers</span>
-              </div>
-              <div class="flex items-start gap-3">
-                <span class="text-[#1a73e8]">→</span>
-                <span class="text-[#5f6368]">Expanded influencer partnerships</span>
-              </div>
-              <div class="flex items-start gap-3">
-                <span class="text-[#1a73e8]">→</span>
-                <span class="text-[#5f6368]">Video marketing for product education</span>
-              </div>
+
+        <section class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+            <h3 class="text-2xl font-medium text-[#202124] mb-4">Executive Summary</h3>
+            <p class="text-[#5f6368] leading-relaxed text-lg">
+                Tesla's revolutionary approach to sustainable energy requires a marketing strategy that matches its innovation. This proposal outlines a comprehensive digital marketing approach to amplify Tesla's brand presence and drive qualified leads.
+            </p>
+        </section>
+
+        <section>
+            <h3 class="text-2xl font-medium text-[#202124] mb-6 px-2">Current State Analysis</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Strengths (GREEN border) -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 relative overflow-hidden group hover:shadow-md transition-shadow">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-[#137333]"></div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[#e6f4ea] p-2 rounded-full mr-3">
+                            <svg class="w-6 h-6 text-[#137333]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-medium text-[#202124]">Strengths</h4>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="text-[#5f6368]">• Brand authority in electric vehicle market</li>
+                        <li class="text-[#5f6368]">• Strong social media presence with CEO thought leadership</li>
+                        <li class="text-[#5f6368]">• Customer advocacy and word-of-mouth marketing</li>
+                        <li class="text-[#5f6368]">• Innovation-first reputation</li>
+                    </ul>
+                </div>
+
+                <!-- Opportunities (BLUE border) -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 relative overflow-hidden group hover:shadow-md transition-shadow">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-[#1a73e8]"></div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[#e8f0fe] p-2 rounded-full mr-3">
+                            <svg class="w-6 h-6 text-[#1a73e8]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h4 class="text-xl font-medium text-[#202124]">Opportunities</h4>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="text-[#5f6368]">• Enhanced content marketing for new market segments</li>
+                        <li class="text-[#5f6368]">• Improved local SEO for service centers</li>
+                        <li class="text-[#5f6368]">• Expanded influencer partnerships</li>
+                        <li class="text-[#5f6368]">• Video marketing for product education</li>
+                    </ul>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-[#202124] mb-6">Strategic Recommendations</h2>
+        <section>
+            <h3 class="text-2xl font-medium text-[#202124] mb-6 px-2">Strategic Recommendations</h3>
+            <div class="grid md:grid-cols-1 gap-6">
+                
+                <!-- Recommendation Card 1 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h4 class="text-lg font-bold text-[#1a73e8] mb-4 flex items-center">
+                        <span class="bg-[#e8f0fe] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">1</span>
+                        Content Marketing Enhancement
+                    </h4>
+                    <div class="grid md:grid-cols-1 gap-8 pl-11">
+                        <div>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• Total cost of ownership comparisons</li>
+                                <li>• Environmental impact calculations</li>
+                                <li>• Charging infrastructure guides</li>
+                                <li>• Technology deep-dives on autopilot and battery innovations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-      <div class="bg-[#f8f9fa] rounded-xl p-6 mb-6">
-        <h3 class="text-2xl font-semibold text-[#202124] mb-4">1. Content Marketing Enhancement</h3>
-        <div class="bg-white rounded-lg p-6 border border-gray-100">
-          <div class="prose max-w-none">
-            <p class="text-base text-[#5f6368] leading-relaxed mb-4">
-              Develop comprehensive content that educates potential customers on:
-            </p>
-            <ul class="list-none pl-0">
-              <li class="custom-bullet">Total cost of ownership comparisons</li>
-              <li class="custom-bullet">Environmental impact calculations</li>
-              <li class="custom-bullet">Charging infrastructure guides</li>
-              <li class="custom-bullet">Technology deep-dives on autopilot and battery innovations</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+                <!-- Recommendation Card 2 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h4 class="text-lg font-bold text-[#1a73e8] mb-4 flex items-center">
+                        <span class="bg-[#e8f0fe] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">2</span>
+                        Social Media Amplification
+                    </h4>
+                    <div class="grid md:grid-cols-1 gap-8 pl-11">
+                        <div>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• User-generated content campaigns</li>
+                                <li>• Behind-the-scenes manufacturing content</li>
+                                <li>• Customer testimonial video series</li>
+                                <li>• Live Q&A sessions with engineers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-      <div class="bg-[#f8f9fa] rounded-xl p-6 mb-6">
-        <h3 class="text-2xl font-semibold text-[#202124] mb-4">2. Social Media Amplification</h3>
-        <div class="bg-white rounded-lg p-6 border border-gray-100">
-          <div class="prose max-w-none">
-            <p class="text-base text-[#5f6368] leading-relaxed mb-4">
-              Leverage Tesla's existing social strength with:
-            </p>
-            <ul class="list-none pl-0">
-              <li class="custom-bullet">User-generated content campaigns</li>
-              <li class="custom-bullet">Behind-the-scenes manufacturing content</li>
-              <li class="custom-bullet">Customer testimonial video series</li>
-              <li class="custom-bullet">Live Q&A sessions with engineers</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+                <!-- Recommendation Card 3 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h4 class="text-lg font-bold text-[#1a73e8] mb-4 flex items-center">
+                        <span class="bg-[#e8f0fe] w-8 h-8 rounded-full flex items-center justify-center mr-3 text-sm">3</span>
+                        Search Engine Optimization
+                    </h4>
+                    <div class="grid md:grid-cols-1 gap-8 pl-11">
+                        <div>
+                            <ul class="text-sm text-[#5f6368] space-y-2">
+                                <li>• "Electric vehicle comparison"</li>
+                                <li>• "Best electric SUV"</li>
+                                <li>• "Tesla charging near me"</li>
+                                <li>• "EV tax credits"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-      <div class="bg-[#f8f9fa] rounded-xl p-6">
-        <h3 class="text-2xl font-semibold text-[#202124] mb-4">3. Search Engine Optimization</h3>
-        <div class="bg-white rounded-lg p-6 border border-gray-100">
-          <div class="prose max-w-none">
-            <p class="text-base text-[#5f6368] leading-relaxed mb-4">
-              Optimize for high-intent keywords:
-            </p>
-            <ul class="list-none pl-0">
-              <li class="custom-bullet">"Electric vehicle comparison"</li>
-              <li class="custom-bullet">"Best electric SUV"</li>
-              <li class="custom-bullet">"Tesla charging near me"</li>
-              <li class="custom-bullet">"EV tax credits"</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+            </div>
+        </section>
 
-    <section class="mb-16">
-      <div class="bg-[#e6f4ea] rounded-xl p-8">
-        <h3 class="text-2xl font-semibold text-[#137333] mb-4">Investment & ROI</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-          <div>
-            <p class="text-3xl font-bold text-[#137333]">$120,000</p>
-            <p class="text-sm text-[#137333]/80">Initial Investment</p>
-          </div>
-          <div>
-            <p class="text-3xl font-bold text-[#137333]">$25,000</p>
-            <p class="text-sm text-[#137333]/80">Monthly Retainer</p>
-          </div>
-          <div>
-            <p class="text-3xl font-bold text-[#137333]">45%</p>
-            <p class="text-sm text-[#137333]/80">Projected Lead Increase (6 months)</p>
-          </div>
-        </div>
-        <p class="text-base text-[#137333]">Estimated ROI: 3.2x within first year</p>
-      </div>
-    </section>
+        <section>
+            <h3 class="text-2xl font-medium text-[#202124] mb-6 px-2">Investment & ROI Analysis</h3>
+            <div class="bg-[#e6f4ea] rounded-xl p-8">
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
+                    <div>
+                        <p class="text-3xl font-bold text-[#137333]">$120,000</p>
+                        <p class="text-sm text-[#137333]/80">Initial Investment</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-[#137333]">$25,000</p>
+                        <p class="text-sm text-[#137333]/80">Monthly Retainer</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-[#137333]">45%</p>
+                        <p class="text-sm text-[#137333]/80">Projected Lead Increase in 6 months</p>
+                    </div>
+                </div>
+                <div class="border-t border-[#137333]/20 pt-4 mt-4">
+                    <p class="text-[#137333] font-medium">Estimated ROI: 3.2x within first year</p>
+                </div>
+            </div>
+        </section>
 
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-[#202124] mb-6">Why Choose iExcel</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <div class="bg-[#f8f9fa] rounded-xl p-6 hover:shadow-md transition">
-          <h3 class="text-xl font-semibold text-[#202124] mb-4">Automotive Industry Expertise</h3>
-          <p class="text-base text-[#5f6368] leading-relaxed">15+ years working with automotive brands</p>
-        </div>
-        
-        <div class="bg-[#f8f9fa] rounded-xl p-6 hover:shadow-md transition">
-          <h3 class="text-xl font-semibold text-[#202124] mb-4">Performance Marketing Focus</h3>
-          <p class="text-base text-[#5f6368] leading-relaxed">Data-driven campaigns with clear ROI</p>
-        </div>
-        
-        <div class="bg-[#f8f9fa] rounded-xl p-6 hover:shadow-md transition">
-          <h3 class="text-xl font-semibold text-[#202124] mb-4">Technical Capabilities</h3>
-          <p class="text-base text-[#5f6368] leading-relaxed">Advanced tracking and attribution modeling</p>
-        </div>
+        <section>
+            <h3 class="text-2xl font-medium text-[#202124] mb-6 px-2">Why Choose iExcel</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">Automotive Industry Expertise</h4>
+                    <p class="text-sm text-[#5f6368]">15+ years working with automotive brands</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">Performance Marketing Focus</h4>
+                    <p class="text-sm text-[#5f6368]">Data-driven campaigns with clear ROI</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">Technical Capabilities</h4>
+                    <p class="text-sm text-[#5f6368]">Advanced tracking and attribution modeling</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+                    <h4 class="text-lg font-medium text-[#202124] mb-3">Creative Excellence</h4>
+                    <p class="text-sm text-[#5f6368]">Award-winning creative team</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="bg-[#f8f9fa] rounded-xl p-6 hover:shadow-md transition">
-          <h3 class="text-xl font-semibold text-[#202124] mb-4">Creative Excellence</h3>
-          <p class="text-base text-[#5f6368] leading-relaxed">Award-winning creative team</p>
-        </div>
-        
-      </div>
-    </section>
+        <section>
+            <h3 class="text-2xl font-medium text-[#202124] mb-6 px-2">Next Steps</h3>
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+                <ol class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="bg-[#e8f0fe] text-[#1a73e8] font-bold rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">1</span>
+                        <div>
+                            <strong class="text-[#202124]">Schedule discovery call to discuss Tesla's specific goals</strong>
+                            <p class="text-[#5f6368] text-sm mt-1"></p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-[#e8f0fe] text-[#1a73e8] font-bold rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">2</span>
+                        <div>
+                            <strong class="text-[#202124]">Conduct competitive analysis of EV market</strong>
+                            <p class="text-[#5f6368] text-sm mt-1"></p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-[#e8f0fe] text-[#1a73e8] font-bold rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">3</span>
+                        <div>
+                            <strong class="text-[#202124]">Develop customized strategy based on findings</strong>
+                            <p class="text-[#5f6368] text-sm mt-1"></p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-[#e8f0fe] text-[#1a73e8] font-bold rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">4</span>
+                        <div>
+                            <strong class="text-[#202124]">Present detailed implementation roadmap</strong>
+                            <p class="text-[#5f6368] text-sm mt-1"></p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-[#e8f0fe] text-[#1a73e8] font-bold rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0">5</span>
+                        <div>
+                            <strong class="text-[#202124]">Begin execution with quick-win initiatives</strong>
+                            <p class="text-[#5f6368] text-sm mt-1"></p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
 
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold text-[#202124] mb-6">Next Steps</h2>
+    </main>
 
-      <div class="bg-[#f8f9fa] rounded-xl p-6">
-        <div class="bg-white rounded-lg p-6 border border-gray-100">
-          <div class="space-y-3">
-            <div class="custom-bullet">Schedule discovery call to discuss Tesla's specific goals</div>
-            <div class="custom-bullet">Conduct competitive analysis of EV market</div>
-            <div class="custom-bullet">Develop customized strategy based on findings</div>
-            <div class="custom-bullet">Present detailed implementation roadmap</div>
-            <div class="custom-bullet">Begin execution with quick-win initiatives</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </div>
 </body>
 </html>
