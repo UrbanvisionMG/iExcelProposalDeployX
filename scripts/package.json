@@ -1,0 +1,15 @@
+{
+  "name": "iexcel-proposal-generator",
+  "version": "1.0.0",
+  "description": "Automated HTML proposal generator using Gemini AI",
+  "main": "generate-html.js",
+  "scripts": {
+    "generate": "node generate-html.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
