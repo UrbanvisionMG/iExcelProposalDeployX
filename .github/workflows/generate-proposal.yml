@@ -36,11 +36,11 @@ jobs:
       - name: Install dependencies
         run: |
           cd scripts
-          npm install node-fetch
+          npm install node-fetch@2
       
-      - name: Generate HTML from JSON
+      - name: Generate HTML with Claude
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CHANGED_FILES: ${{ steps.changed-files.outputs.changed_files }}
         run: |
           node scripts/generate-html.js
@@ -50,5 +50,5 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add public/proposal/*.html
-          git diff --quiet && git diff --staged --quiet || git commit -m "Generate HTML proposals from JSON data"
+          git diff --quiet && git diff --staged --quiet || git commit -m "Generate HTML proposals with Claude Sonnet 4"
           git push
