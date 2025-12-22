@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const fetch = require('node-fetch');
-const { execSync } = require('child_process');
 
 // Read system prompt
 const systemPrompt = fs.readFileSync(path.join(__dirname, 'system-prompt.txt'), 'utf-8');
@@ -14,32 +13,31 @@ if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
 }
 
-// Get changed files from git
-let changedFiles = [];
-try {
-  const gitDiff = execSync('git diff --name-only HEAD~1 HEAD', { encoding: 'utf-8' });
-  changedFiles = gitDiff
+// Get files to process from environment or process all
+let filesToProcess = [];
+if (process.env.CHANGED_FILES) {
+  filesToProcess = process.env.CHANGED_FILES
     .split('\n')
-    .filter(f => f.startsWith('data/proposals/') && f.endsWith('.json'))
+    .map(f => f.trim())
+    .filter(f => f.endsWith('.json'))
     .map(f => path.basename(f));
   
-  console.log(`\n📝 Detected ${changedFiles.length} changed proposal(s):`);
-  changedFiles.forEach(f => console.log(`   - ${f}`));
-} catch (e) {
-  console.log('⚠️  Could not detect changes, processing all files...');
-  changedFiles = fs.readdirSync(proposalsDir).filter(file => file.endsWith('.json'));
+  if (filesToProcess.length > 0) {
+    console.log(`\n📝 Processing ${filesToProcess.length} changed file(s):`);
+    filesToProcess.forEach(f => console.log(`   - ${f}`));
+  }
 }
 
-// If no changes detected, process all (fallback)
-if (changedFiles.length === 0) {
-  changedFiles = fs.readdirSync(proposalsDir).filter(file => file.endsWith('.json'));
-  console.log(`\n📁 Processing all ${changedFiles.length} proposal(s)`);
+// Fallback to all files if none specified
+if (filesToProcess.length === 0) {
+  filesToProcess = fs.readdirSync(proposalsDir).filter(file => file.endsWith('.json'));
+  console.log(`\n📁 Processing all ${filesToProcess.length} proposal(s)`);
 }
 
 console.log(`\n🚀 Starting proposal generation...`);
 console.log(`System prompt loaded: ${Math.ceil(systemPrompt.length / 4).toLocaleString()} tokens\n`);
 
-// Process each changed file
+// Process proposal
 async function processProposal(filename) {
   const jsonPath = path.join(proposalsDir, filename);
   const proposalData = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
@@ -113,12 +111,12 @@ async function processProposal(filename) {
   }
 }
 
-// Process all changed files
+// Process all files
 (async () => {
   const startTime = Date.now();
   const results = [];
 
-  for (const file of changedFiles) {
+  for (const file of filesToProcess) {
     const result = await processProposal(file);
     results.push(result);
   }
