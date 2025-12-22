@@ -1,0 +1,5 @@
+{
+  "company_name": "RollbackTest",
+  "proposal_type": "Speed Test",
+  "content_markdown": "# Quick Test\n\nThis should be FAST with gemini-2.0-flash-exp."
+}
