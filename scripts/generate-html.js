@@ -34,7 +34,7 @@ if (filesToProcess.length === 0) {
   console.log(`\n📁 Processing all ${filesToProcess.length} proposal(s)`);
 }
 
-console.log(`\n🚀 Starting proposal generation...`);
+console.log(`\n🚀 Starting proposal generation with Claude Sonnet 4...`);
 console.log(`System prompt loaded: ${Math.ceil(systemPrompt.length / 4).toLocaleString()} tokens\n`);
 
 // Process proposal
@@ -49,47 +49,44 @@ async function processProposal(filename) {
   const fullPrompt = `${systemPrompt}\n\n---\n\nPROPOSAL DATA TO FORMAT:\n\n${JSON.stringify(proposalData, null, 2)}\n\n---\n\nGenerate the complete HTML document now.`;
   
   const estimatedInputTokens = Math.ceil(fullPrompt.length / 4);
-  const estimatedOutputNeeded = Math.ceil(JSON.stringify(proposalData).length / 2);
   
   console.log(`Input size: ~${estimatedInputTokens.toLocaleString()} tokens`);
-  console.log(`Estimated output needed: ~${estimatedOutputNeeded.toLocaleString()} tokens`);
-  
-  const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${process.env.GEMINI_API_KEY}`;
-  
-  console.log(`Calling Gemini API...`);
+  console.log(`Calling Claude Sonnet 4 API...`);
   
   try {
-    const response = await fetch(apiUrl, {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': process.env.ANTHROPIC_API_KEY,
+        'anthropic-version': '2023-06-01'
+      },
       body: JSON.stringify({
-        contents: [{ parts: [{ text: fullPrompt }] }],
-        generationConfig: {
-          maxOutputTokens: 32000,
-          temperature: 0.7,
-          topP: 0.95,
-          topK: 40
-        }
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 16000,
+        messages: [{
+          role: 'user',
+          content: fullPrompt
+        }]
       })
     });
 
     if (!response.ok) {
-      throw new Error(`API error: ${response.status}`);
+      const errorData = await response.json();
+      throw new Error(`API error ${response.status}: ${errorData.error?.message || 'Unknown error'}`);
     }
 
     const data = await response.json();
     
-    if (!data.candidates || !data.candidates[0]) {
-      throw new Error('No response from model');
-    }
+    console.log(`Claude response received`);
+    console.log(`Tokens: ${data.usage?.input_tokens} in, ${data.usage?.output_tokens} out`);
 
-    const finishReason = data.candidates[0].finishReason;
-    console.log(`Gemini finish reason: ${finishReason}`);
-
-    let generatedHTML = data.candidates[0].content.parts[0].text;
+    let generatedHTML = data.content[0].text;
+    
+    // Remove markdown code fences if present
     generatedHTML = generatedHTML.replace(/```html\n?/g, '').replace(/```\n?$/g, '').trim();
 
-    // Use JSON filename for HTML output (remove .json, add .html)
+    // Use JSON filename for HTML output
     const outputFilename = filename.replace('.json', '.html');
     const outputPath = path.join(outputDir, outputFilename);
 
@@ -140,5 +137,5 @@ async function processProposal(filename) {
     process.exit(1);
   }
 
-  console.log(`✅ All proposals generated successfully!`);
+  console.log(`✅ All proposals generated successfully with Claude Sonnet 4!`);
 })();
