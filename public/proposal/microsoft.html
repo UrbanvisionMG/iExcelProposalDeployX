@@ -3,108 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SEO Proposal - Microsoft</title>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <title>Microsoft - SEO Strategy Test - GEM DESIGN</title>
+  
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: { extend: {
-        fontFamily: { sans: ['"Plus Jakarta Sans"','sans-serif'], body: ['Roboto','sans-serif'] },
-        colors: { legacyBlue:'#1a73e8', legacyGreen:'#137333', bgGrey:'#f8f9fa', textDark:'#202124', glowCyan:'#06B6D4', glowIndigo:'#4F46E5' },
-        boxShadow: { soft:'0 4px 6px -1px rgba(0,0,0,0.05)', float:'0 20px 25px -5px rgba(0,0,0,0.1)' }
-      }}
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap');
+    
+    body {
+      font-family: 'Roboto', sans-serif;
     }
-  </script>
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Google Sans', sans-serif;
+    }
+    
+    /* Custom bullet styles */
+    .custom-bullet {
+      display: flex;
+      align-items: start;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .custom-bullet::before {
+      content: "✓";
+      color: #137333;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+  </style>
 </head>
-<body class="antialiased text-textDark">
 
-  <!-- Fixed Navigation -->
-  <nav class="fixed top-0 left-0 w-full h-20 bg-white/80 backdrop-blur-md z-50 shadow-soft">
-    <div class="container max-w-7xl mx-auto px-8 flex items-center justify-between h-full">
-      <a href="#" class="text-2xl font-sans font-bold text-legacyBlue">iExcel</a>
-      <div class="space-x-6">
-        <a href="#" class="hover:text-legacyBlue transition-colors">Home</a>
-        <a href="#" class="hover:text-legacyBlue transition-colors">Services</a>
-        <a href="#" class="hover:text-legacyBlue transition-colors">About</a>
-        <a href="#" class="hover:text-legacyBlue transition-colors">Contact</a>
-      </div>
-    </div>
-  </nav>
+<body class="bg-white text-[#202124]">
+  <div class="max-w-6xl mx-auto px-6 py-12">
+    
+    <!-- HEADER: Logo + Tagline -->
+    <header class="flex items-center gap-6 mb-12 pb-6 border-b border-gray-200">
+      <img src="https://iexcel.co/wp-content/uploads/2023/01/iexcel_logo.png" 
+           alt="iExcel" 
+           class="h-12 object-contain">
+      <div class="h-10 w-px bg-gray-300"></div>
+      <span class="text-sm text-[#5f6368] font-medium tracking-wide">
+        Digital Marketing, Focused On Growth
+      </span>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="py-24 bg-gradient-to-r from-legacyBlue to-glowCyan text-white">
-    <div class="container max-w-7xl mx-auto px-8">
-      <h1 class="text-5xl font-sans font-bold mb-6">SEO Strategy Test - GEM DESIGN</h1>
-      <p class="text-xl font-body">Proposal for Microsoft</p>
-    </div>
-  </section>
+    <!-- DOCUMENT CONTENT STARTS HERE -->
+    <!-- Use the component library above to format the markdown content -->
+    
+    <section class="mb-16">
+  <h1 class="text-4xl font-bold text-[#202124] mb-4">Test Gem Design</h1>
+</section>
 
-  <!-- Executive Summary -->
-  <section class="py-24 bg-bgGrey">
-    <div class="container max-w-7xl mx-auto px-8 relative">
-      <div class="absolute top-0 right-10 -translate-y-1/2 w-12 h-12 rounded-2xl bg-legacyBlue text-white flex items-center justify-center font-sans font-extrabold text-xl shadow-lg">01</div>
-      <h2 class="text-3xl font-sans font-bold mb-8">Executive Summary</h2>
-      <div class="bg-white p-8 rounded-2xl shadow-soft border border-gray-100">
-        <p class="font-body">This is a test to verify the new beautiful Gem design system is working.</p>
-      </div>
-    </div>
-  </section>
+<section class="mb-16">
+  <h2 class="text-3xl font-bold text-[#202124] mb-6">Executive Summary</h2>
+  <div class="prose max-w-none">
+    <p class="text-base text-[#5f6368] leading-relaxed mb-4">
+      This is a test to verify the new beautiful Gem design system is working.
+    </p>
+  </div>
+</section>
 
-  <!-- Key Features -->
-  <section class="py-24 bg-white">
-    <div class="container max-w-7xl mx-auto px-8 relative">
-      <div class="absolute top-0 right-10 -translate-y-1/2 w-12 h-12 rounded-2xl bg-legacyBlue text-white flex items-center justify-center font-sans font-extrabold text-xl shadow-lg">02</div>
-      <h2 class="text-3xl font-sans font-bold mb-8">Key Features</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 hover:-translate-y-1 hover:shadow-float transition-all">
-          <h3 class="text-xl font-sans font-bold mb-4">Typography</h3>
-          <p class="font-body">Plus Jakarta Sans typography</p>
-        </div>
-        <div class="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 hover:-translate-y-1 hover:shadow-float transition-all">
-          <h3 class="text-xl font-sans font-bold mb-4">Shadows</h3>
-          <p class="font-body">Custom shadow utilities</p>
-        </div>
-        <div class="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 hover:-translate-y-1 hover:shadow-float transition-all">
-          <h3 class="text-xl font-sans font-bold mb-4">Hover Effects</h3>
-          <p class="font-body">Beautiful hover effects</p>
-        </div>
-        <div class="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 hover:-translate-y-1 hover:shadow-float transition-all">
-          <h3 class="text-xl font-sans font-bold mb-4">Color Palette</h3>
-          <p class="font-body">Professional color palette</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="mb-16">
+  <h2 class="text-3xl font-bold text-[#202124] mb-6">Key Features</h2>
+  <div class="prose max-w-none">
+    <ul class="list-none pl-0">
+      <li class="custom-bullet">Plus Jakarta Sans typography</li>
+      <li class="custom-bullet">Custom shadow utilities</li>
+      <li class="custom-bullet">Beautiful hover effects</li>
+      <li class="custom-bullet">Professional color palette</li>
+    </ul>
+  </div>
+</section>
 
-  <!-- Expected Results -->
-  <section class="py-24 bg-bgGrey">
-    <div class="container max-w-7xl mx-auto px-8 relative">
-      <div class="absolute top-0 right-10 -translate-y-1/2 w-12 h-12 rounded-2xl bg-legacyBlue text-white flex items-center justify-center font-sans font-extrabold text-xl shadow-lg">03</div>
-      <h2 class="text-3xl font-sans font-bold mb-8">Expected Results</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white p-8 rounded-2xl shadow-soft border border-gray-100">
-          <h3 class="text-xl font-sans font-bold mb-4">Visual Quality</h3>
-          <ul class="list-none pl-0">
-            <li class="flex items-start gap-3"><span class="text-legacyBlue font-bold">✓</span>Smooth shadows and elevation</li>
-            <li class="flex items-start gap-3"><span class="text-legacyBlue font-bold">✓</span>Generous white space</li>
-            <li class="flex items-start gap-3"><span class="text-legacyBlue font-bold">✓</span>Premium styling</li>
-          </ul>
-        </div>
-        <div class="bg-white p-8 rounded-2xl shadow-soft border border-gray-100">
-          <h3 class="text-xl font-sans font-bold mb-4">ROI Timeline</h3>
-          <p class="font-body">Break-even: 3-4 months</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="mb-16">
+  <h2 class="text-3xl font-bold text-[#202124] mb-6">Expected Results</h2>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 py-12 text-white">
-    <div class="container max-w-7xl mx-auto px-8 flex items-center justify-between">
-      <a href="#" class="text-2xl font-sans font-bold text-white">iExcel</a>
-      <p class="text-sm">&copy; 2024 Microsoft. All rights reserved.</p>
-    </div>
-  </footer>
+  <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">Visual Quality</h3>
+  <div class="prose max-w-none">
+    <ul class="list-none pl-0">
+      <li class="custom-bullet">Smooth shadows and elevation</li>
+      <li class="custom-bullet">Generous white space</li>
+      <li class="custom-bullet">Premium styling</li>
+    </ul>
+  </div>
+</section>
 
+<section class="mb-16">
+  <h3 class="text-2xl font-semibold text-[#202124] mb-4 mt-8">ROI Timeline</h3>
+  <div class="prose max-w-none">
+    <p class="text-base text-[#5f6368] leading-relaxed mb-4">Break-even: 3-4 months</p>
+  </div>
+</section>
+    
+  </div>
 </body>
 </html>
