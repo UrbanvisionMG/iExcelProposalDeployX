@@ -89,9 +89,8 @@ async function processProposal(filename) {
     let generatedHTML = data.candidates[0].content.parts[0].text;
     generatedHTML = generatedHTML.replace(/```html\n?/g, '').replace(/```\n?$/g, '').trim();
 
-    // Create output filename
-    const companyName = proposalData.company_name || filename.replace('.json', '');
-    const outputFilename = companyName.toLowerCase().replace(/[^a-z0-9]/g, '') + '.html';
+    // Use JSON filename for HTML output (remove .json, add .html)
+    const outputFilename = filename.replace('.json', '.html');
     const outputPath = path.join(outputDir, outputFilename);
 
     fs.writeFileSync(outputPath, generatedHTML, 'utf-8');
