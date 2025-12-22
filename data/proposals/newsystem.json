@@ -1,0 +1,5 @@
+{
+  "company_name": "NewSystem Test",
+  "proposal_type": "Digital Marketing Proposal", 
+  "content_markdown": "# NewSystem Test\n\nThis will test the FIXED script that reads from CHANGED_FILES env var.\n\n## Services\n- SEO\n- PPC"
+}
