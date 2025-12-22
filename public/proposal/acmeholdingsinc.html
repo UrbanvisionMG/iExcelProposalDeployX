@@ -3,192 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Marketing Proposal - Acme Holdings Inc</title>
-    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Google Sans', sans-serif;
-        }
-        .styled-bullets {
-            list-style: none;
-            padding-left: 1em;
-        }
-
-        .styled-bullets li::before {
-            content: "•";
-            color: #1a73e8;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
-    </style>
+    <title>Acme Holdings Inc <> iExcel Proposal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        'google_blue': '#1a73e8',
-                        'google_green': '#137333',
-                        'dark_grey': '#202124',
-                        'light_grey': '#5f6368',
+                    fontFamily: {
+                        'google-sans': ['"Google Sans"', 'sans-serif'],
+                        'roboto': ['"Roboto"', 'sans-serif'],
                     },
-                    backgroundColor: {
-                        'f8f9fa': '#f8f9fa',
-                        'e8f0fe': '#e8f0fe',
-                        'e6f4ea': '#e6f4ea',
+                    colors: {
+                        google: {
+                            blue: '#1a73e8',
+                            green: '#137333',
+                            grey: '#202124',
+                            lightgrey: '#5f6368',
+                            bg: '#f8f9fa',
+                            highlight: '#e8f0fe',
+                            success: '#e6f4ea'
+                        }
                     }
                 }
             }
         }
     </script>
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #f8f9fa; color: #202124; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Google Sans', sans-serif; }
+        .bullet-point {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .bullet-point::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6rem;
+            width: 6px;
+            height: 6px;
+            background-color: #1a73e8;
+            border-radius: 50%;
+        }
+    </style>
 </head>
-<body class="bg-white">
-    <header class="bg-white py-4 shadow-md">
-        <div class="container mx-auto px-4 flex items-center justify-between">
-            <a href="https://iexcel.co" class="flex items-center">
-                <img src="https://iexcel.co/wp-content/uploads/2023/01/iexcel_logo.png" alt="iExcel Logo" class="h-12 mr-2">
-                <span class="text-lg font-semibold">Digital Marketing, Focused On Growth</span>
-            </a>
+<body class="bg-google-bg min-h-screen flex flex-col">
+
+    <!-- HEADER - ALWAYS INCLUDE -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <img src="https://iexcel.co/wp-content/uploads/2023/01/iexcel_logo.png" alt="iExcel Logo" class="h-10 w-auto object-contain">
+            </div>
+            <div class="text-sm font-medium text-google-lightgrey uppercase tracking-wide bg-google-highlight px-3 py-1 rounded-full">
+                Digital Marketing, Focused On Growth
+            </div>
         </div>
     </header>
 
-    <main class="container mx-auto py-8 px-4">
-        <section class="mb-8">
-            <h1 class="text-3xl font-bold mb-4">Digital Marketing Proposal</h1>
-            <h2 class="text-2xl font-semibold text-google_blue mb-2">Acme Holdings Inc</h2>
-            <div class="max-w-5xl">
-                <p class="mb-4">Acme Holdings Inc is seeking to expand their digital presence and increase lead generation through a comprehensive digital marketing strategy. This proposal outlines our recommended approach to achieve measurable growth in the next 6 months.</p>
-            </div>
-        </section>
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow max-w-5xl mx-auto px-6 py-10 w-full space-y-8">
 
-        <section class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">What We Learned</h2>
-            <div class="bg-[#f8f9fa] rounded-xl p-6 max-w-5xl">
-                <ul class="styled-bullets">
-                    <li><strong>Current State:</strong> Limited organic search presence beyond branded keywords. Website traffic is primarily direct, with minimal inbound lead generation.</li>
-                    <li><strong>Goals:</strong> Increase qualified leads by 150% and establish thought leadership in the financial services industry.</li>
-                    <li><strong>Challenges:</strong> Highly competitive keywords, long sales cycles, and need for compliance-friendly content.</li>
-                </ul>
-                <blockquote class="mt-4 italic border-l-4 border-google_blue pl-4">
-                    "We need a partner who understands both marketing and our industry constraints."
-                    <cite class="block mt-2">- Jane Smith, CMO</cite>
-                </blockquote>
-            </div>
-        </section>
+        <!-- TITLE CARD -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+            <h1 class="text-3xl md:text-4xl font-google-sans font-bold text-google-grey mb-2">Acme Holdings Inc <> iExcel</h1>
+            <h2 class="text-xl text-google-blue font-medium mb-6">Digital Marketing Proposal</h2>
+        </div>
 
-        <section class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">How We Can Help</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="bg-[#f8f9fa] rounded-xl p-6 hover:shadow-md">
-                    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
-                        <h3 class="font-semibold text-lg mb-2">SEO Strategy</h3>
-                        <p><strong>Finding:</strong> Current website lacks topical authority and technical optimization</p>
-                        <p><strong>Opportunity:</strong> Build content hub around financial planning topics, improve site speed, and implement structured data</p>
+        <!-- EACH MAJOR SECTION -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+            <h3 class="text-2xl font-google-sans font-bold text-google-grey mb-6 flex items-center gap-3">
+                <span class="flex items-center justify-center w-8 h-8 rounded-full bg-google-highlight text-google-blue text-sm">1</span>
+                What We Learned
+            </h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                    <div class="space-y-4">
+                        <p class="font-bold text-google-blue mb-2">Business & Product Findings</p>
+                        <ul class="space-y-2 ml-4">
+                            <li class="bullet-point">Current State: Limited organic search presence beyond branded keywords. Website traffic is primarily direct, with minimal inbound lead generation.</li>
+                            <li class="bullet-point">Goals: Increase qualified leads by 150% and establish thought leadership in the financial services industry.</li>
+                            <li class="bullet-point">Challenges: Highly competitive keywords, long sales cycles, and need for compliance-friendly content.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg italic text-gray-600 border-l-4 border-gray-300">
+                        "We need a partner who understands both marketing and our industry constraints." <br>
+                        <span class="text-xs font-bold not-italic mt-1 block">– Jane Smith, CMO</span>
                     </div>
                 </div>
-
-                <div class="bg-[#f8f9fa] rounded-xl p-6 hover:shadow-md">
-                    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
-                        <h3 class="font-semibold text-lg mb-2">Paid Search</h3>
-                        <p><strong>Finding:</strong> No current paid campaigns running</p>
-                        <p><strong>Opportunity:</strong> Launch targeted Google Ads campaigns for high-intent keywords with conversion-optimized landing pages</p>
-                    </div>
-                </div>
-
-                <div class="bg-[#f8f9fa] rounded-xl p-6 hover:shadow-md">
-                    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
-                        <h3 class="font-semibold text-lg mb-2">Content Marketing</h3>
-                        <p><strong>Finding:</strong> Blog exists but lacks consistency and strategic focus</p>
-                        <p><strong>Opportunity:</strong> Develop editorial calendar with weekly posts targeting decision-makers in target segments</p>
+                <div class="space-y-6">
+                    <div class="space-y-4">
+                        <p class="font-bold text-google-blue mb-2">Current Marketing Reality</p>
+                        <ul class="space-y-2">
+                            <li class="flex gap-2"><span class="text-google-blue">✓</span> Limited organic search visibility</li>
+                            <li class="flex gap-2"><span class="text-google-blue">✓</span> No active paid campaigns</li>
+                            <li class="flex gap-2"><span class="text-google-blue">✓</span> Inconsistent content marketing efforts</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">Tactical Plan</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="bg-[#f8f9fa] rounded-xl p-6 hover:shadow-md">
-                    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
-                        <h3 class="font-semibold text-lg mb-2">Month 1</h3>
-                        <h4 class="font-semibold text-md mb-2">Foundation</h4>
-                        <p>SEO audit, keyword research, competitor analysis, content strategy development, analytics setup</p>
-                    </div>
+            <div class="grid md:grid-cols-3 gap-4 mt-8">
+                <div class="bg-google-highlight p-4 rounded-lg">
+                    <span class="block text-xs font-bold text-google-blue uppercase tracking-wider mb-1">Goals</span>
+                    <p class="text-sm text-gray-700">Increase qualified leads by 150% and establish thought leadership in the financial services industry.</p>
                 </div>
-
-                <div class="bg-[#f8f9fa] rounded-xl p-6 hover:shadow-md">
-                    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
-                        <h3 class="font-semibold text-lg mb-2">Months 2-3</h3>
-                        <h4 class="font-semibold text-md mb-2">Launch</h4>
-                        <p>Technical SEO fixes, content creation (8-10 articles), paid search campaigns launch, conversion tracking</p>
-                    </div>
+                <div class="bg-google-highlight p-4 rounded-lg">
+                    <span class="block text-xs font-bold text-google-blue uppercase tracking-wider mb-1">Constraints</span>
+                    <p class="text-sm text-gray-700">Highly competitive keywords, long sales cycles, and need for compliance-friendly content.</p>
                 </div>
-
-                <div class="bg-[#f8f9fa] rounded-xl p-6 hover:shadow-md">
-                    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
-                        <h3 class="font-semibold text-lg mb-2">Months 4-6</h3>
-                        <h4 class="font-semibold text-md mb-2">Optimize & Scale</h4>
-                        <p>Ongoing content, campaign optimization, link building, monthly reporting and strategy refinement</p>
-                    </div>
+                <div class="bg-google-highlight p-4 rounded-lg">
+                    <span class="block text-xs font-bold text-google-blue uppercase tracking-wider mb-1">Opportunities</span>
+                    <p class="text-sm text-gray-700">Content hub, targeted Google Ads, and strategic editorial calendar</p>
                 </div>
-            </div>
-        </section>
-
-        <section class="mb-8">
-            <h2 class="text-2xl font-semibold mb-4">Investment</h2>
-            <p class="mb-4">$4,500 one-time setup fee for initial audit, strategy, and platform configuration</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="bg-[#f8f9fa] rounded-xl p-6">
-                    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
-                        <h3 class="font-semibold text-lg mb-2">Essential</h3>
-                        <h4 class="text-md text-light_grey">Foundation + SEO Focus</h4>
-                        <p class="text-2xl font-bold">$5,000/month</p>
-                        <p class="mb-4">SEO strategy, technical optimization, content creation (4 posts/month), monthly reporting</p>
-                    </div>
-                </div>
-
-                <div class="bg-[#e6f4ea] rounded-xl p-6">
-                    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
-                        <h3 class="font-semibold text-lg mb-2">Growth</h3>
-                        <h4 class="text-md text-light_grey">Essential + Paid Acquisition</h4>
-                        <p class="text-2xl font-bold">$8,500/month</p>
-                        <p class="mb-4">Everything in Essential, plus Google Ads management ($3K ad spend included), landing page optimization, weekly reporting</p>
-                    </div>
-                    <div class="mt-4 text-right">
-                      <span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">Recommended</span>
-                    </div>
-                </div>
-
-                <div class="bg-[#f8f9fa] rounded-xl p-6">
-                    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4">
-                        <h3 class="font-semibold text-lg mb-2">Enterprise</h3>
-                        <h4 class="text-md text-light_grey">Full-Service Growth</h4>
-                        <p class="text-2xl font-bold">$12,000/month</p>
-                        <p class="mb-4">Everything in Growth, plus LinkedIn campaigns, marketing automation setup, dedicated account manager</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-[#f8f9fa] py-8">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-                <p class="text-dark_grey">Ready to take your digital marketing to the next level? Contact us today to discuss your specific needs and how we can help you achieve your business goals.</p>
-            </div>
-            <div class="bg-[#e8f0fe] rounded-xl p-6 text-google_blue">
-                <h3 class="font-semibold text-lg mb-2">Contact Us</h3>
-                <p>Get in touch to learn more about our services.</p>
-                <a href="https://iexcel.co" class="inline-block mt-4 bg-google_blue text-white rounded-full px-6 py-2 hover:bg-blue-700">Learn More</a>
             </div>
         </div>
-    </footer>
+
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+            <h3 class="text-2xl font-google-sans font-bold text-google-grey mb-6 flex items-center gap-3">
+                <span class="flex items-center justify-center w-8 h-8 rounded-full bg-google-highlight text-google-blue text-sm">2</span>
+                How We Can Help
+            </h3>
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-google-highlight">
+                            <th class="text-left p-4 font-google-sans font-bold text-google-grey">Area</th>
+                            <th class="text-left p-4 font-google-sans font-bold text-google-grey">Finding</th>
+                            <th class="text-left p-4 font-google-sans font-bold text-google-grey">Opportunity (iExcel will…)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-100">
+                            <td class="p-4 align-top">
+                                <span class="font-bold text-google-blue text-sm">SEO Strategy</span>
+                            </td>
+                            <td class="p-4 text-sm text-gray-700 align-top">Current website lacks topical authority and technical optimization</td>
+                            <td class="p-4 text-sm text-gray-700 align-top">Build content hub around financial planning topics, improve site speed, and implement structured data</td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="p-4 align-top">
+                                <span class="font-bold text-google-blue text-sm">Paid Search</span>
+                            </td>
+                            <td class="p-4 text-sm text-gray-700 align-top">No current paid campaigns running</td>
+                            <td class="p-4 text-sm text-gray-700 align-top">Launch targeted Google Ads campaigns for high-intent keywords with conversion-optimized landing pages</td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="p-4 align-top">
+                                <span class="font-bold text-google-blue text-sm">Content Marketing</span>
+                            </td>
+                            <td class="p-4 text-sm text-gray-700 align-top">Blog exists but lacks consistency and strategic focus</td>
+                            <td class="p-4 text-sm text-gray-700 align-top">Develop editorial calendar with weekly posts targeting decision-makers in target segments</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+            <h3 class="text-2xl font-google-sans font-bold text-google-grey mb-6 flex items-center gap-3">
+                <span class="flex items-center justify-center w-8 h-8 rounded-full bg-google-highlight text-google-blue text-sm">3</span>
+                Tactical Plan
+            </h3>
+            <div class="space-y-6">
+                <div class="border-l-4 border-google-blue pl-4">
+                    <h4 class="font-google-sans font-bold text-lg text-google-grey mb-2">Phase 1 - Foundation (Month 1)</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-bold text-sm text-google-blue mb-1">1. Activities</p>
+                            <ul class="space-y-1 text-sm text-gray-700 ml-4">
+                                <li class="bullet-point">SEO audit, keyword research, competitor analysis, content strategy development, analytics setup</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-l-4 border-google-blue pl-4">
+                    <h4 class="font-google-sans font-bold text-lg text-google-grey mb-2">Phase 2 - Launch (Months 2-3)</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-bold text-sm text-google-blue mb-1">1. Activities</p>
+                            <ul class="space-y-1 text-sm text-gray-700 ml-4">
+                                <li class="bullet-point">Technical SEO fixes, content creation (8-10 articles), paid search campaigns launch, conversion tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-l-4 border-google-blue pl-4">
+                    <h4 class="font-google-sans font-bold text-lg text-google-grey mb-2">Phase 3 - Optimize & Scale (Months 4-6)</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-bold text-sm text-google-blue mb-1">1. Activities</p>
+                            <ul class="space-y-1 text-sm text-gray-700 ml-4">
+                                <li class="bullet-point">Ongoing content, campaign optimization, link building, monthly reporting and strategy refinement</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+            <h3 class="text-2xl font-google-sans font-bold text-google-grey mb-6 flex items-center gap-3">
+                <span class="flex items-center justify-center w-8 h-8 rounded-full bg-google-highlight text-google-blue text-sm">4</span>
+                Investment
+            </h3>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <h4 class="font-google-sans font-bold text-xl text-google-grey">Essential</h4>
+                            <p class="text-sm text-google-lightgrey">Foundation + SEO Focus</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-2xl font-bold text-google-blue">$5,000/mo</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">SEO strategy, technical optimization, content creation (4 posts/month), monthly reporting</p>
+                    <ul class="space-y-2">
+                        <li class="flex gap-2 text-sm"><span class="text-google-green">✓</span> SEO strategy</li>
+                        <li class="flex gap-2 text-sm"><span class="text-google-green">✓</span> Technical optimization</li>
+                        <li class="flex gap-2 text-sm"><span class="text-google-green">✓</span> Content creation (4 posts/month)</li>
+                        <li class="flex gap-2 text-sm"><span class="text-google-green">✓</span> Monthly reporting</li>
+                    </ul>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <h4 class="font-google-sans font-bold text-xl text-google-grey">Growth</h4>
+                            <p class="text-sm text-google-lightgrey">Essential + Paid Acquisition</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-2xl font-bold text-google-blue">$8,500/mo</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">Everything in Essential, plus Google Ads management ($3K ad spend included), landing page optimization, weekly reporting</p>
+                    <ul class="space-y-2">
+                        <li class="flex gap-2 text-sm"><span class="text-google-green">✓</span> Everything in Essential</li>
+                        <li class="flex gap-2 text-sm"><span class="text-google-green">✓</span> Google Ads management ($3K ad spend included)</li>
+                        <li class="flex gap-2 text-sm"><span class="text-google-green">✓</span> Landing page optimization</li>
+                        <li class="flex gap-2 text-sm"><span class="text-google-green">✓</span> Weekly reporting</li>
+                    </ul>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <div class="flex items-start justify-between mb-4">
+                        <div>
+                            <h4 class="font-google-sans font-bold text-xl text-google-grey">Enterprise</h4>
+                            <p class="text-sm text-google-lightgrey">Full-Service Growth</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-2xl font-bold text-google-blue">$12,000/mo</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">Everything in Growth, plus LinkedIn campaigns, marketing automation setup, dedicated account manager</p>
+                    <ul class="space-y-2">
+                        <li class="flex gap-2 text-sm"><span class="text-google-green">✓</span> Everything in Growth</li>
+                        <li class="flex gap-2 text-sm"><span class="text-google-green">✓</span> LinkedIn campaigns</li>
+                        <li class="flex gap-2 text-sm"><span class="text-google-green">✓</span> Marketing automation setup</li>
+                        <li class="flex gap-2 text-sm"><span class="text-google-green">✓</span> Dedicated account manager</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="mt-6"> $4,500 one-time setup fee for initial audit, strategy, and platform configuration</p>
+        </div>
+
+    </main>
+
 </body>
 </html>
