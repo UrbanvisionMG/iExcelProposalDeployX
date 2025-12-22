@@ -1,4 +1,15 @@
 ---
+// Required by Astro for dynamic routes in static mode
+export async function getStaticPaths() {
+  // Return an empty array initially
+  // Your Agent will trigger new deploys when adding proposals
+  // For now, return a test example so the build succeeds
+  return [
+    { params: { id: 'test' } },
+    { params: { id: 'example' } },
+  ];
+}
+
 // Dynamic proposal route: /proposal/{id}
 // The {id} will be the company name with no spaces (lowercase)
 const { id } = Astro.params;
