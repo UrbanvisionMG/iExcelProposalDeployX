@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const fetch = require('node-fetch');
 
 // Read system prompt
 const systemPrompt = fs.readFileSync(path.join(__dirname, 'system-prompt.txt'), 'utf-8');
@@ -39,7 +40,11 @@ ${JSON.stringify(proposalData, null, 2)}
 Generate the complete HTML document now.`;
 
   // Call Gemini API
-  const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=' + process.env.GEMINI_API_KEY, {
+  const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${process.env.GEMINI_API_KEY}`;
+  
+  console.log('Calling Gemini API...');
+  
+  const response = await fetch(apiUrl, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -61,6 +66,10 @@ Generate the complete HTML document now.`;
   }
 
   const result = await response.json();
+  
+  if (!result.candidates || !result.candidates[0] || !result.candidates[0].content) {
+    throw new Error(`Invalid Gemini response: ${JSON.stringify(result)}`);
+  }
   
   // Extract HTML from response
   let html = result.candidates[0].content.parts[0].text;
