@@ -3,7 +3,7 @@ const path = require('path');
 
 async function generateHTML() {
   try {
-    console.log('🚀 Starting proposal generation with Gemini Exp 1206...');
+    console.log('🚀 Starting proposal generation with Gemini 3 Pro...');
     
     // Read all JSON files from proposals directory
     const proposalsDir = path.join(process.cwd(), 'data', 'proposals');
@@ -46,10 +46,10 @@ Requirements:
 
 Return ONLY the complete HTML code, no explanations or markdown formatting.`;
 
-      console.log('Calling Gemini Exp 1206 API...');
+      console.log('Calling Gemini 3 Pro API...');
 
-      // Call Gemini API - Using latest experimental model
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-exp-1206:generateContent?key=${process.env.GEMINI_API_KEY}`, {
+      // Call Gemini API - Using Gemini 3 Pro
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-preview:generateContent?key=${process.env.GEMINI_API_KEY}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -63,7 +63,8 @@ Return ONLY the complete HTML code, no explanations or markdown formatting.`;
           }],
           generationConfig: {
             temperature: 0.7,
-            maxOutputTokens: 8192
+            maxOutputTokens: 8192,
+            thinkingLevel: "MEDIUM"  // Use medium thinking for better quality
           }
         })
       });
@@ -74,7 +75,7 @@ Return ONLY the complete HTML code, no explanations or markdown formatting.`;
       }
 
       const data = await response.json();
-      console.log('Gemini response received');
+      console.log('Gemini 3 Pro response received');
       
       // Extract HTML from response
       let htmlContent = data.candidates[0].content.parts[0].text;
@@ -97,7 +98,7 @@ Return ONLY the complete HTML code, no explanations or markdown formatting.`;
       }
     }
     
-    console.log('\n✅ All proposals generated successfully with Gemini Exp 1206!');
+    console.log('\n✅ All proposals generated successfully with Gemini 3 Pro!');
     
   } catch (error) {
     console.error('❌ Error generating proposals:', error.message);
