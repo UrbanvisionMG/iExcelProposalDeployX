@@ -1,0 +1,5 @@
+{
+    "company_name": "Test Company",
+    "proposal_type": "Gemini Integration Test",
+    "content_markdown": "# Gemini Integration Test\n\nTesting if the new Gemini API integration works correctly.\n\n## Summary\n\nThis is a minimal test proposal to verify:\n- JSON processing\n- Gemini API connectivity\n- HTML generation\n- Deployment pipeline\n\nIf you see this as HTML, everything worked!"
+}
