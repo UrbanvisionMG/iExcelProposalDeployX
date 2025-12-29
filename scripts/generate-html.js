@@ -3,7 +3,7 @@ const path = require('path');
 
 async function generateHTML() {
   try {
-    console.log('🚀 Starting proposal generation with Gemini 3 Pro...');
+    console.log('🚀 Starting proposal generation with Gemini 3 Pro Latest...');
     
     // Read all JSON files from proposals directory
     const proposalsDir = path.join(process.cwd(), 'data', 'proposals');
@@ -46,10 +46,10 @@ Requirements:
 
 Return ONLY the complete HTML code, no explanations or markdown formatting.`;
 
-      console.log('Calling Gemini 3 Pro API...');
+      console.log('Calling Gemini 3 Pro Latest API...');
 
-      // Call Gemini API - Using Gemini 3 Pro with CORRECT parameter structure!
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-preview:generateContent?key=${process.env.GEMINI_API_KEY}`, {
+      // Call Gemini API - Using gemini-3-pro-latest
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-latest:generateContent?key=${process.env.GEMINI_API_KEY}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -64,8 +64,8 @@ Return ONLY the complete HTML code, no explanations or markdown formatting.`;
           generationConfig: {
             temperature: 0.7,
             maxOutputTokens: 8192,
-            thinkingConfig: {              // CORRECT: nested in thinkingConfig!
-              thinkingLevel: "MEDIUM"      // CORRECT: camelCase thinkingLevel!
+            thinkingConfig: {
+              thinkingLevel: "MEDIUM"
             }
           }
         })
@@ -77,7 +77,7 @@ Return ONLY the complete HTML code, no explanations or markdown formatting.`;
       }
 
       const data = await response.json();
-      console.log('Gemini 3 Pro response received');
+      console.log('✅ Gemini 3 Pro Latest response received');
       
       // Extract HTML from response
       let htmlContent = data.candidates[0].content.parts[0].text;
@@ -100,7 +100,7 @@ Return ONLY the complete HTML code, no explanations or markdown formatting.`;
       }
     }
     
-    console.log('\n✅ All proposals generated successfully with Gemini 3 Pro!');
+    console.log('\n🎉 All proposals generated successfully with Gemini 3 Pro Latest!');
     
   } catch (error) {
     console.error('❌ Error generating proposals:', error.message);
