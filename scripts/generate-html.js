@@ -64,7 +64,7 @@ Return ONLY the complete HTML code, no explanations or markdown formatting.`;
           generationConfig: {
             temperature: 0.7,
             maxOutputTokens: 8192,
-            thinkingLevel: "MEDIUM"  // Use medium thinking for better quality
+            thinking_level: "MEDIUM"  // Fixed: snake_case not camelCase!
           }
         })
       });
