@@ -3,7 +3,7 @@ const path = require('path');
 
 async function generateHTML() {
   try {
-    console.log('🚀 Starting proposal generation with Gemini 3 Pro Latest...');
+    console.log('🚀 Starting proposal generation with Gemini 2.0 Flash Experimental...');
     
     // Read all JSON files from proposals directory
     const proposalsDir = path.join(process.cwd(), 'data', 'proposals');
@@ -46,10 +46,10 @@ Requirements:
 
 Return ONLY the complete HTML code, no explanations or markdown formatting.`;
 
-      console.log('Calling Gemini 3 Pro Latest API...');
+      console.log('Calling Gemini 2.0 Flash Experimental API...');
 
-      // Call Gemini API - Using gemini-3-pro-latest
-      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-latest:generateContent?key=${process.env.GEMINI_API_KEY}`, {
+      // Call Gemini API - Back to the working version!
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${process.env.GEMINI_API_KEY}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -63,10 +63,7 @@ Return ONLY the complete HTML code, no explanations or markdown formatting.`;
           }],
           generationConfig: {
             temperature: 0.7,
-            maxOutputTokens: 8192,
-            thinkingConfig: {
-              thinkingLevel: "MEDIUM"
-            }
+            maxOutputTokens: 8192
           }
         })
       });
@@ -77,7 +74,7 @@ Return ONLY the complete HTML code, no explanations or markdown formatting.`;
       }
 
       const data = await response.json();
-      console.log('✅ Gemini 3 Pro Latest response received');
+      console.log('✅ Gemini 2.0 Flash Experimental response received');
       
       // Extract HTML from response
       let htmlContent = data.candidates[0].content.parts[0].text;
@@ -100,7 +97,7 @@ Return ONLY the complete HTML code, no explanations or markdown formatting.`;
       }
     }
     
-    console.log('\n🎉 All proposals generated successfully with Gemini 3 Pro Latest!');
+    console.log('\n✅ All proposals generated successfully with Gemini 2.0 Flash Experimental!');
     
   } catch (error) {
     console.error('❌ Error generating proposals:', error.message);
