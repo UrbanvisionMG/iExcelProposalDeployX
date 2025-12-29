@@ -34,7 +34,7 @@ if (filesToProcess.length === 0) {
   console.log(`\n📁 Processing all ${filesToProcess.length} proposal(s)`);
 }
 
-console.log(`\n🚀 Starting proposal generation with Claude Sonnet 4...`);
+console.log(`\n🚀 Starting proposal generation with Gemini 2.0 Flash...`);
 console.log(`System prompt loaded: ${Math.ceil(systemPrompt.length / 4).toLocaleString()} tokens\n`);
 
 // Process proposal
@@ -46,42 +46,49 @@ async function processProposal(filename) {
   console.log(`Processing: ${filename}`);
   console.log(`========================================`);
   
-  const fullPrompt = `${systemPrompt}\n\n---\n\nPROPOSAL DATA TO FORMAT:\n\n${JSON.stringify(proposalData, null, 2)}\n\n---\n\nGenerate the complete HTML document now.`;
+  const userPrompt = `PROPOSAL DATA TO FORMAT:\n\n${JSON.stringify(proposalData, null, 2)}\n\n---\n\nGenerate the complete HTML document now.`;
   
-  const estimatedInputTokens = Math.ceil(fullPrompt.length / 4);
+  const estimatedInputTokens = Math.ceil((systemPrompt.length + userPrompt.length) / 4);
   
   console.log(`Input size: ~${estimatedInputTokens.toLocaleString()} tokens`);
-  console.log(`Calling Claude Sonnet 4 API...`);
+  console.log(`Calling Gemini 2.0 Flash API...`);
   
   try {
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${process.env.GEMINI_API_KEY}`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': process.env.ANTHROPIC_API_KEY,
-        'anthropic-version': '2023-06-01'
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 16000,
-        messages: [{
-          role: 'user',
-          content: fullPrompt
-        }]
+        system_instruction: {
+          parts: [{ text: systemPrompt }]
+        },
+        contents: [{
+          parts: [{ text: userPrompt }]
+        }],
+        generationConfig: {
+          temperature: 1,
+          maxOutputTokens: 8192,
+          responseMimeType: "text/plain"
+        }
       })
     });
 
     if (!response.ok) {
       const errorData = await response.json();
-      throw new Error(`API error ${response.status}: ${errorData.error?.message || 'Unknown error'}`);
+      throw new Error(`API error ${response.status}: ${JSON.stringify(errorData)}`);
     }
 
     const data = await response.json();
     
-    console.log(`Claude response received`);
-    console.log(`Tokens: ${data.usage?.input_tokens} in, ${data.usage?.output_tokens} out`);
+    if (!data.candidates || !data.candidates[0] || !data.candidates[0].content) {
+      throw new Error(`Invalid response from Gemini: ${JSON.stringify(data)}`);
+    }
 
-    let generatedHTML = data.content[0].text;
+    console.log(`Gemini response received`);
+    console.log(`Tokens: ${data.usageMetadata?.promptTokenCount || 'N/A'} in, ${data.usageMetadata?.candidatesTokenCount || 'N/A'} out`);
+
+    let generatedHTML = data.candidates[0].content.parts[0].text;
     
     // Remove markdown code fences if present
     generatedHTML = generatedHTML.replace(/```html\n?/g, '').replace(/```\n?$/g, '').trim();
@@ -137,5 +144,5 @@ async function processProposal(filename) {
     process.exit(1);
   }
 
-  console.log(`✅ All proposals generated successfully with Claude Sonnet 4!`);
+  console.log(`✅ All proposals generated successfully with Gemini 2.0 Flash!`);
 })();
