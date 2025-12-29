@@ -48,7 +48,7 @@ Return ONLY the complete HTML code, no explanations or markdown formatting.`;
 
       console.log('Calling Gemini 3 Pro API...');
 
-      // Call Gemini API - Using Gemini 3 Pro
+      // Call Gemini API - Using Gemini 3 Pro with CORRECT parameter structure!
       const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-preview:generateContent?key=${process.env.GEMINI_API_KEY}`, {
         method: 'POST',
         headers: {
@@ -64,7 +64,9 @@ Return ONLY the complete HTML code, no explanations or markdown formatting.`;
           generationConfig: {
             temperature: 0.7,
             maxOutputTokens: 8192,
-            thinking_level: "MEDIUM"  // Fixed: snake_case not camelCase!
+            thinkingConfig: {              // CORRECT: nested in thinkingConfig!
+              thinkingLevel: "MEDIUM"      // CORRECT: camelCase thinkingLevel!
+            }
           }
         })
       });
