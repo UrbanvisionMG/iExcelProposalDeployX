@@ -1,0 +1,5 @@
+{
+    "company_name": "Success Test Inc",
+    "proposal_type": "Complete System Verification",
+    "content_markdown": "# 🎉 Claude Sonnet 4.5 Success!\n\n## System Status: FULLY OPERATIONAL\n\nThis proposal was generated using:\n- **Model**: Claude Sonnet 4.5 (claude-sonnet-4-20250514)\n- **API**: Anthropic Messages API\n- **Platform**: GitHub Actions\n- **Deployment**: Netlify\n\n## What Works\n\n✅ **API Integration** - Claude API key properly configured in secrets  \n✅ **HTML Generation** - Professional, responsive HTML output  \n✅ **Auto-Delete** - JSON files cleaned up automatically  \n✅ **Git Workflow** - Proper permissions for committing changes  \n✅ **Deployment** - Automatic push to Netlify  \n\n## Quality Improvements\n\nClaude Sonnet 4.5 produces significantly better HTML than Gemini 2.0:\n- Cleaner code structure\n- Better Tailwind CSS usage\n- More professional design\n- Superior typography\n\n**Everything is working perfectly!** 🚀"
+}
