@@ -1,0 +1,39 @@
+name: Generate Proposal HTML
+
+on:
+  push:
+    paths:
+      - 'data/proposals/**'
+  workflow_dispatch:
+
+jobs:
+  generate-html:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Run HTML generation with Claude
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/generate-html.js
+        
+      - name: Commit generated HTML
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add public/proposal/*.html || true
+          git add data/proposals/ || true
+          git diff --quiet && git diff --staged --quiet || git commit -m "Generated HTML proposals"
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
