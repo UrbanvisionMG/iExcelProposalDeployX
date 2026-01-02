@@ -1,0 +1,5 @@
+{
+    "company_name": "Claude Test Inc",
+    "proposal_type": "AI Proposal Generation Test",
+    "content_markdown": "# Testing Claude Sonnet 4.5\n\nThis is a test to verify Claude is generating better HTML than Gemini 2.0.\n\n## Why Claude?\n\n- **Superior HTML Quality** - Better structured, cleaner code\n- **Modern Design** - Professional and responsive\n- **Latest Model** - Claude Sonnet 4.5 (December 2024)\n\n## Expected Results\n\nClaude should produce:\n1. Clean, semantic HTML\n2. Beautiful Tailwind CSS styling\n3. Responsive mobile-first design\n4. Professional typography and spacing\n\n**Let's see the Claude difference!** 🚀"
+}
