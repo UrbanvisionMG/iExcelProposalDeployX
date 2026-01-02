@@ -1,0 +1,5 @@
+{
+    "company_name": "Redeploy Test - Claude Sonnet 4.5",
+    "proposal_type": "API Key Verification Test",
+    "content_markdown": "# Claude Sonnet 4.5 Deployment Test\n\n## Testing Complete System\n\nThis test verifies:\n\n1. ✅ Claude API key works in GitHub Actions\n2. ✅ Workflow properly exposes secrets\n3. ✅ HTML generation with Claude Sonnet 4.5\n4. ✅ Auto-delete JSON after generation\n\n## Expected Result\n\nBeautiful HTML with:\n- Modern Tailwind CSS styling\n- Professional typography\n- Responsive design\n- Clean layout\n\n**This is the final test!** 🚀"
+}
