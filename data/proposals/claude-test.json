@@ -1,5 +1,0 @@
-{
-    "company_name": "Claude Test v2",
-    "proposal_type": "AI Proposal - Testing Fixed Workflow",
-    "content_markdown": "# Claude Sonnet 4.5 Test\n\nTesting the fixed workflow with proper API key configuration.\n\n## What's Different\n\n- ✅ Workflow properly exposes ANTHROPIC_API_KEY\n- ✅ Claude Sonnet 4.5 (latest model)\n- ✅ Auto-delete JSON after generation\n\n## Expected Output\n\nProfessional HTML with:\n- Modern Tailwind CSS design\n- Responsive layout\n- Clean typography\n- Beautiful spacing\n\n**This should work!** 🎯"
-}
