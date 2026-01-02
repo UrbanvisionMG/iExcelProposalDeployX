@@ -1,0 +1,5 @@
+{
+    "company_name": "Final Claude Test",
+    "proposal_type": "Testing Fixed Secrets",
+    "content_markdown": "# Claude Sonnet 4.5 - Final Test\n\n## This Should Work\n\nAPI key has been re-encrypted and re-added to secrets.\n\n**Testing now!** 🎯"
+}
