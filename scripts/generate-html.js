@@ -7,16 +7,35 @@ async function generateHTML() {
     
     // Read all JSON files from proposals directory
     const proposalsDir = path.join(process.cwd(), 'data', 'proposals');
+    const outputDir = path.join(process.cwd(), 'public', 'proposal');
+    
     const files = await fs.readdir(proposalsDir);
     const jsonFiles = files.filter(file => file.endsWith('.json'));
     
-    console.log(`Found ${jsonFiles.length} proposal(s) to generate`);
-    
+    // Filter to ONLY process files that DON'T have HTML yet
+    const newFiles = [];
     for (const file of jsonFiles) {
+      const htmlFile = path.join(outputDir, file.replace('.json', '.html'));
+      try {
+        await fs.access(htmlFile);
+        console.log(`⏭️  Skipping ${file} (HTML already exists)`);
+      } catch {
+        newFiles.push(file);
+      }
+    }
+    
+    if (newFiles.length === 0) {
+      console.log('✅ No new proposals to generate - all HTML files exist!');
+      return;
+    }
+    
+    console.log(`Found ${newFiles.length} NEW proposal(s) to generate`);
+    
+    for (const file of newFiles) {
       const filePath = path.join(proposalsDir, file);
       const proposalData = JSON.parse(await fs.readFile(filePath, 'utf-8'));
       
-      console.log(`\nProcessing: ${file}`);
+      console.log(`\n🆕 Processing NEW: ${file}`);
       
       // Read system prompt
       const systemPrompt = await fs.readFile(
@@ -48,7 +67,6 @@ Return ONLY the complete HTML code, no explanations or markdown formatting.`;
 
       console.log('Calling Gemini 2.0 Flash Experimental API...');
 
-      // Call Gemini API - Back to the working version!
       const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${process.env.GEMINI_API_KEY}`, {
         method: 'POST',
         headers: {
@@ -83,7 +101,6 @@ Return ONLY the complete HTML code, no explanations or markdown formatting.`;
       htmlContent = htmlContent.replace(/```html\n?/g, '').replace(/```\n?/g, '');
       
       // Save HTML file
-      const outputDir = path.join(process.cwd(), 'public', 'proposal');
       await fs.mkdir(outputDir, { recursive: true });
       
       const outputFile = path.join(outputDir, file.replace('.json', '.html'));
@@ -97,7 +114,7 @@ Return ONLY the complete HTML code, no explanations or markdown formatting.`;
       }
     }
     
-    console.log('\n✅ All proposals generated successfully with Gemini 2.0 Flash Experimental!');
+    console.log(`\n✅ Generated ${newFiles.length} new proposal(s) successfully!`);
     
   } catch (error) {
     console.error('❌ Error generating proposals:', error.message);
